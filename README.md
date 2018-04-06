@@ -1,6 +1,8 @@
 # Airbnb clone
 
-Gems used:
+
+## Steps taken:  
 
 
-Steps taken:
+### Create a simple Rails Project with Bootstrap  
+install bootstrap gem
