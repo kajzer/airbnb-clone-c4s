@@ -48,3 +48,18 @@
 5. Update rails configuration for host (config.action_mailer.default_url_options = { host: 'https://airbnb-code4startup-kajzer.c9users.io' })
 6. Update development.rb to use ENV varaibles through figaro
 
+### Create Facebook app
+
+### Create social authentication
+1. Add gem omniauth and omniauth-facebook
+2. Generate migration AddFieldsToUser provider:string uid:string image:string
+3. Add config.omniauth :facebook, 'API_KEY', 'API_SECRET', scope: 'email', info_fields: 'email, name' to devise.rb
+4. Change 'API_KEY' and 'API_SECRET' to ENV['fb_app_id'] and ENV['fb_app_secret']
+5. Add method self.from_omniauth(auth) to User
+6. Add controller omniauth_callbacks_controller.rb and paste contents from [devise/omniauth](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview)
+7. Add button to views/devise/sessions/new.html.erb and registrations/new
+8. Moddify routes.rb 
+9. Modify helper method to display avatar from fb as well
+10. Solution to uninitialized Users [Stack Overflow](https://stackoverflow.com/questions/13537313/routing-error-uninitialized-constant-users?rq=1)
+
+### Stying views
