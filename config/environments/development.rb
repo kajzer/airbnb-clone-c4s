@@ -27,7 +27,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -52,5 +52,27 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://airbnb-code4startup-kajzer.c9users.io' }
+  
+  config.action_mailer.delivery_method = :smtp
+  
+  # Mailgun settings
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.mailgun.org',
+    port: 2525,
+    domain: 'sandbox51f35e0f38024af2b15b584674aaff0c.mailgun.org',
+    authentication: 'plain',
+    user_name: ENV['mailgun_username'],
+    password: ENV['mailgun_password']
+  }
+  
+  # Config for gmail
+  # config.action_mailer.smtp_settings = {
+  #   address: 'smtp.gmail.com',
+  #   port: 587,
+  #   enable_starttls_auto: true,
+  #   authentication: 'plain',
+  #   user_name: ENV['guser_name'],
+  #   password: ENV['gpassword']
+  # }
 end

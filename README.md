@@ -33,5 +33,18 @@
 4. Add toastr for devise messages to views
 
 ### Sending transactional email with Gmail
-1. 
+1. Add gem figaro and configure -> info from comments
+2. Add smtp configuration to development.rb
+3. Change devise configuration
+4. Add confirmable to user.rb
+5. Add migration for confirmable
+6. Problems wiht gmail solution in [Stak Overflow](https://stackoverflow.com/questions/25209676/running-into-smtp-error-when-trying-to-send-email-in-ror-app)  
+
+### Sending transactional email with Mailgun
+1. Create mailgun account
+2. Comment out gmail settings
+3. Add credentials to config/application.yml
+4. Change email adres to valid one in devise.rb (config.mailer_sender = 'anandomar2@wp.pl')
+5. Update rails configuration for host (config.action_mailer.default_url_options = { host: 'https://airbnb-code4startup-kajzer.c9users.io' })
+6. Update development.rb to use ENV varaibles through figaro
 
