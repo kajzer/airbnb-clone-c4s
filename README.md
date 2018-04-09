@@ -20,5 +20,9 @@
 
 ### Update authentication views
 1. add bootstrap to devise forms  
-2. add name instead of email to shared/navbar
+2. add name instead of email to shared/navbar  
+
+### Gravatar
+1. Update root path
+2. Add avatar_url helper with css class for diffrent size
 
