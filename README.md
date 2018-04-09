@@ -63,3 +63,6 @@
 10. Solution to uninitialized Users [Stack Overflow](https://stackoverflow.com/questions/13537313/routing-error-uninitialized-constant-users?rq=1)
 
 ### Stying views
+1. Add styles and google fonts
+
+
