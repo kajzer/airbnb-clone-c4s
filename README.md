@@ -65,4 +65,12 @@
 ### Stying views
 1. Add styles and google fonts
 
+### Create user profile page
+1. Generate migration - add phone_number and description to User
+2. Add route for users :show
+3. Create file users_controller.rb
+4. Add styling for user show view
+
+### Create edit profile page
+
 
