@@ -6,7 +6,7 @@
 1. install bootstrap gem
 
 ### Create basic authentication
-1. install devise gem '4.2'
+1. install devise gem
 
 ### Building navbar with partial view  
 1. copy navbar static from bootstrap demo
@@ -72,5 +72,9 @@
 4. Add styling for user show view
 
 ### Create edit profile page
+1. Add styles and additional fields to profile page
+2. Remove current password_field from registrations/edit
+3. Create RegistrationsController
 
+### 
 
