@@ -26,3 +26,12 @@
 1. Update root path
 2. Add avatar_url helper with css class for diffrent size
 
+### Notification
+1. Add toastr-rails gem
+2. Add js and css for toastr
+3. Add toastr for flash messages
+4. Add toastr for devise messages to views
+
+### Sending transactional email with Gmail
+1. 
+
