@@ -1,2 +1,32 @@
-<h1>Rooms#location</h1>
-<p>Find me in app/views/rooms/location.html.erb</p>
+<div class="row">
+    <div class="col-md-3">
+        <%= render 'room_menu' %>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-default">
+            
+            <div class="panel-heading">
+                Location
+            </div>
+            
+            <div class="panel-body">
+                <div class="container">
+                    <%= form_for @room do |f| %>
+                    
+                        <div class="row">
+                            <div class="form-group">
+                                <label>Address</label>
+                                <%= f.text_field :address, placeholder: "What is your address?", class: "form-control" %>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <%= f.submit "Save", class: "btn btn-form" %>
+                        </div>
+                    
+                    <% end %>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

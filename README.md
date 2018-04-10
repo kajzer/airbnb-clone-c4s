@@ -86,5 +86,13 @@
 3. Update routes.rb
 
 ### Create Room Views
-1. 
+1. Create rooms/new view
+2. Create sidebar
+3. Create rooms/photo_upload view -> without uploads yet
+4. Create rooms/listing view placeholder
+5. Create rooms/amenities view placeholder
+6. Create rooms/description view placeholder
+7. Create rooms/location view placeholder
+8. Create rooms/pricing view placeholder
+9. Create partial for sidebar (link helpers are without @room and they are member routes)
 
