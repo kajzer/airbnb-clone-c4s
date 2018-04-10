@@ -82,4 +82,9 @@
 
 ### Create Room Controller
 1. Rails g controller Rooms with many actions
+2. Fill out Rooms controller actions
+3. Update routes.rb
+
+### Create Room Views
+1. 
 
