@@ -76,5 +76,10 @@
 2. Remove current password_field from registrations/edit
 3. Create RegistrationsController
 
-### 
+### Create Room Model
+1. Rails g model Room with many fields
+2. Add association to models
+
+### Create Room Controller
+1. Rails g controller Rooms with many actions
 

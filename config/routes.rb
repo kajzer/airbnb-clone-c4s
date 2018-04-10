@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  get 'rooms/index'
+
+  get 'rooms/new'
+
+  get 'rooms/create'
+
+  get 'rooms/listing'
+
+  get 'rooms/pricing'
+
+  get 'rooms/description'
+
+  get 'rooms/photo_upload'
+
+  get 'rooms/amenities'
+
+  get 'rooms/location'
+
+  get 'rooms/update'
+
   root 'pages#home'
 
   devise_for :users, 
