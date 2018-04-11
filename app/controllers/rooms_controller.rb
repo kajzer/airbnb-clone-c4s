@@ -15,7 +15,8 @@ class RoomsController < ApplicationController
     if @room.save
       redirect_to listing_room_path(@room), notice: "Saved..."
     else
-      render :new, notice: "Something went wrong..."
+      flash[:alert] = "Something went wrong..."
+      render :new
     end
   end
   
@@ -45,7 +46,7 @@ class RoomsController < ApplicationController
     if @room.update(room_params)
       flash[:notice] = "Saved..."
     else
-      flash[:notice] = "Something went wrong..."
+      flash[:alert] = "Something went wrong..."
     end
     redirect_back(fallback_location: request.referer)
   end

@@ -98,9 +98,11 @@
 
 ### Styling Views
 1. Add styling to aplication.scss for form elements 
-2. Change class name for _room_menu.html.erb partial
-3. Correct few style mistakes GIT
+2. Change class name for _room_menu.html.erb partial GIT - 6d154051623b2511b89f5203d6366b53c4b0433f
+3. Correct few style mistakes GIT - 04b46eef06d068e5cd8694e6788b89fb6ebe7df4
 
+### Understanding the workflow
+1. Add some fronted validation to views
 
 
 
