@@ -102,7 +102,11 @@
 3. Correct few style mistakes GIT - 04b46eef06d068e5cd8694e6788b89fb6ebe7df4
 
 ### Understanding the workflow
-1. Add some fronted validation to views
+1. Add some fronted validation to views GIT - 489ce42
+
+### Install paperclip
+1. Install ImageMagick "sudo apt-get install imagemagick"
+2. Add gem paperclip
 
 
 
