@@ -99,4 +99,9 @@
 ### Styling Views
 1. Add styling to aplication.scss for form elements 
 2. Change class name for _room_menu.html.erb partial
+3. Correct few style mistakes GIT
+
+
+
+
 
