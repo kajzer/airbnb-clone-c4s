@@ -96,3 +96,7 @@
 8. Create rooms/pricing view placeholder
 9. Create partial for sidebar (link helpers are without @room and they are member routes)
 
+### Styling Views
+1. Add styling to aplication.scss for form elements 
+2. Change class name for _room_menu.html.erb partial
+
