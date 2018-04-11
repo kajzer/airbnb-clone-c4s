@@ -126,8 +126,12 @@
 3. Add some styling for photos upload form
 
 ### Remove Photos with AJAX
-1. Add rule in .gitignore to ingnore photos
-2. 
+1. Add rule in .gitignore to ingnore photos GIT - b6d7b06
+2. Add fontawesome icons by adding link in head
+3. Add link for removing photos in photos_list partial
+4. Add destroy action to remove photos
+5. Create photos/destroy.js.erb
+6. Add http"S" to application helper for FB avatar GIT - 
 
 
 

@@ -8,6 +8,13 @@
                     <div class="panel-heading preview">
                         <%= image_tag photo.image.url %>
                     </div>
+                    <div class="panel-body">
+                        <span class="pull-right">
+                            <%= link_to room_photo_path(photo.room_id, photo), remote: true, method: :delete, data: {confirm: "Are you sure?"} do %>
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            <% end %>
+                        </span>
+                    </div>
                 </div>
             </div>
         <% end %>
