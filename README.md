@@ -131,7 +131,14 @@
 3. Add link for removing photos in photos_list partial
 4. Add destroy action to remove photos
 5. Create photos/destroy.js.erb
-6. Add http"S" to application helper for FB avatar GIT - 
+6. Add http"S" to application helper for FB avatar GIT - fe85e9e
+
+### Amazon S3
+1. Create new bucket on S3
+2. Create new user IAM
+3. Modify development.rb
+4. Add keys to figaro
+5. Add gem aws-sdk
 
 
 

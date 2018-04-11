@@ -75,4 +75,17 @@ Rails.application.configure do
   #   user_name: ENV['guser_name'],
   #   password: ENV['gpassword']
   # }
+  
+  # Old config for aws sdk 2.8
+  config.paperclip_defaults = {
+    storage: :s3,
+    path: ':class/:attachment/:id/:style/:filename',
+    s3_host_name: 's3-eu-west-1.amazonaws.com',
+    s3_credentials: {
+      bucket: 'airpikachucode4startup',
+      access_key_id: ENV['aws-id'],
+      secret_access_key: ENV['aws-secret'],
+      s3_region: 'eu-west-1'
+    }
+  }
 end
