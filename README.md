@@ -118,8 +118,16 @@
 ### Create Photo Controller
 1. Create photos_controller.rb
 2. Modyfi rooms_controller
-3. Add before_action to check if user is room owner
+3. Add before_action to check if user is room owner GIT - 76654de
 
+### Create Photo View
+1. Add form fields for file uploads for photos
+2. Add _photos_list.html.erb partail for showing all photos
+3. Add some styling for photos upload form
+
+### Remove Photos with AJAX
+1. Add rule in .gitignore to ingnore photos
+2. 
 
 
 
