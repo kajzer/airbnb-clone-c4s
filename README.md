@@ -106,7 +106,19 @@
 
 ### Install paperclip
 1. Install ImageMagick "sudo apt-get install imagemagick"
-2. Add gem paperclip
+2. Add gem paperclip GIT - 0fe00ab
+
+### Create Photo Model
+1. rails g model Photo room:references 
+2. rails g paperclip photo image
+3. Add association to rooms and photos models
+4. Add configuration to photo.rb from github gem page
+5. Add routes for photos in rooms for create and destroy
+
+### Create Photo Controller
+1. Create photos_controller.rb
+2. Modyfi rooms_controller
+3. Add before_action to check if user is room owner
 
 
 
