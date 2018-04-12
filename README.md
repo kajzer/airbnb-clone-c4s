@@ -158,5 +158,10 @@
 1. Create rooms/index.html.erb layout
 2. Add default photo to listing if it dosent have image
 3. Copy blank.jpg to assets/images
-4. Create method in model room.rb cover_photo GIT - 
+4. Create method in model room.rb cover_photo GIT - 1de9808
+
+### Create Room Show Page (1:30)
+1. Moddify show.html.erb
+2. Add toastr global config in application.js (not fully functional better use different gem)
+3. Add styles for strikethrough GIT - 
 

@@ -272,3 +272,17 @@ a {
 .panel-heading.preview img {
     width: 100%;
 }
+
+
+/// ROOM SHOW
+.amenities li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+.amenities .text-line-through {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+}
