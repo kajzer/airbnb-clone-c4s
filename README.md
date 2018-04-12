@@ -170,8 +170,12 @@
 2. Add longitude and latitude to room
 3. Add geocoded_by :address to room.rb model
 4. Restart server and reenter address
-4. Add script for google maps without API KEY
+4. Add script for google maps without API KEY GIT - d122244
 
 ### Add Near-by Rooms
-1. 
+1. Add nearby apartments to show.html.erb using geocoder
+2. Added code to enable map loading when changing to nearby room -> (errors in console to solve)
+3. Change units to km from miiles in initializers/geocoder.rb GIT - 
+
+### 
 
