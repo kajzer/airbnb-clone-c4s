@@ -148,7 +148,10 @@
 ### Update the Photo Removing with AJAX
 1. Add ids to view
 2. Add functionality to destroy.js.erb
-3. Change room to class variable @room in photos_controller#destroy
-4. 
+3. Change room to class variable @room in photos_controller#destroy GIT - c4bc933
+
+### Issue with hidden fields
+1. In rooms_controller create private method
+2. Merge hash with active: true if room is ready to prevent issue with changing code by user
 
 
