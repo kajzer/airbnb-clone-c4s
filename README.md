@@ -152,6 +152,11 @@
 
 ### Issue with hidden fields
 1. In rooms_controller create private method
-2. Merge hash with active: true if room is ready to prevent issue with changing code by user
+2. Merge hash with active: true if room is ready to prevent issue with changing code by user GIT - 
 
+### Create Room Index Page
+1. Create rooms/index.html.erb layout
+2. Add default photo to listing if it dosent have image
+3. Copy blank.jpg to assets/images
+4. Create method in model room.rb cover_photo GIT - 
 
