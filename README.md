@@ -138,7 +138,17 @@
 2. Create new user IAM
 3. Modify development.rb
 4. Add keys to figaro
-5. Add gem aws-sdk
+5. Add gem aws-sdk GIT - 61156de
 
+### Add Check to Room Views
+1. Add check to sidebar in room creation and logic to display if form was submited
+2. Add publish button
+3. Add logic only to display publish button when everything is field in and active is false
+
+### Update the Photo Removing with AJAX
+1. Add ids to view
+2. Add functionality to destroy.js.erb
+3. Change room to class variable @room in photos_controller#destroy
+4. 
 
 
