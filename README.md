@@ -163,5 +163,15 @@
 ### Create Room Show Page (1:30)
 1. Moddify show.html.erb
 2. Add toastr global config in application.js (not fully functional better use different gem)
-3. Add styles for strikethrough GIT - 
+3. Add styles for strikethrough GIT - 4410740
+
+### Add Google Map
+1. Add gem geocoder
+2. Add longitude and latitude to room
+3. Add geocoded_by :address to room.rb model
+4. Restart server and reenter address
+4. Add script for google maps without API KEY
+
+### Add Near-by Rooms
+1. 
 
