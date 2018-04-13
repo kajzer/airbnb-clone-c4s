@@ -184,5 +184,8 @@
 
 ### Create Reservations View
 1. Add partial to room view
-2. Add reservations/_form.html.erb GIT - 
+2. Add reservations/_form.html.erb GIT - 46ce499
+
+### Create Reservations Controller
+1. Add reservations_controller.rb GIt - 
 
