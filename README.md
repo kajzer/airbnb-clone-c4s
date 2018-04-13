@@ -175,7 +175,10 @@
 ### Add Near-by Rooms
 1. Add nearby apartments to show.html.erb using geocoder
 2. Added code to enable map loading when changing to nearby room -> (errors in console to solve)
-3. Change units to km from miiles in initializers/geocoder.rb GIT - 
+3. Change units to km from miiles in initializers/geocoder.rb GIT - c80b7e6
 
-### 
+### Create Reservations Model
+1. rails g model Reservation user:references room:references start_date:datetime end_date:datetime price:integer total:integer
+2. Add has_many :reservations to user and room
+3. Add nested route for reservaions GIT - 
 

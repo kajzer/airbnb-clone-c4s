@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
   before_action :set_room, except: [:index, :new, :create]
   before_action :authenticate_user!, except: [:show]
-  #before_action :is_authorised, only: [:listing, :pricing, :description, :photo_upload, :amenities, :location, :update]
+  before_action :is_authorised, only: [:listing, :pricing, :description, :photo_upload, :amenities, :location, :update]
   
   def index
     @rooms = current_user.rooms
