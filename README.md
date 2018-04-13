@@ -187,5 +187,11 @@
 2. Add reservations/_form.html.erb GIT - 46ce499
 
 ### Create Reservations Controller
-1. Add reservations_controller.rb GIt - 
+1. Add reservations_controller.rb GIt - 81f043b
+
+### Add jQuery Date Picker
+1. Add jquery-ui-rails gem
+2. Add js require to application.js
+3. Add script to _form.html.erb
+4. Add stylesheet in <head> tag for jquery ui theme
 

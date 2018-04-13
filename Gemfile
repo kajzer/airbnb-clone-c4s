@@ -43,6 +43,7 @@ gem 'omniauth-facebook', '~> 4.0'
 gem 'paperclip', '~> 5.1.0'
 gem 'aws-sdk', '~> 2.8'
 gem 'geocoder', '~>1.4'
+gem 'jquery-ui-rails', '~> 5.0'
 
 
 # Use Capistrano for deployment
