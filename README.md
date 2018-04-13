@@ -180,5 +180,9 @@
 ### Create Reservations Model
 1. rails g model Reservation user:references room:references start_date:datetime end_date:datetime price:integer total:integer
 2. Add has_many :reservations to user and room
-3. Add nested route for reservaions GIT - 
+3. Add nested route for reservaions GIT - 171b7a5
+
+### Create Reservations View
+1. Add partial to room view
+2. Add reservations/_form.html.erb GIT - 
 
