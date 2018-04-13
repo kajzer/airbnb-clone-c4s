@@ -193,5 +193,9 @@
 1. Add jquery-ui-rails gem
 2. Add js require to application.js
 3. Add script to _form.html.erb
-4. Add stylesheet in <head> tag for jquery ui theme
+4. Add stylesheet in <head> tag for jquery ui theme GIT - a27c5e2
+
+### Refactoring Reservation Form
+1. Add styles to right side booking form in room#show
+2. Add styles for table in reservation form GIT - 
 
