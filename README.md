@@ -187,7 +187,7 @@
 2. Add reservations/_form.html.erb GIT - 46ce499
 
 ### Create Reservations Controller
-1. Add reservations_controller.rb GIt - 81f043b
+1. Add reservations_controller.rb GIT - 81f043b
 
 ### Add jQuery Date Picker
 1. Add jquery-ui-rails gem
@@ -197,5 +197,11 @@
 
 ### Refactoring Reservation Form
 1. Add styles to right side booking form in room#show
-2. Add styles for table in reservation form GIT - 
+2. Add styles for table in reservation form GIT - 5ea2c87
 
+### AJAX for start date
+1. Add preload method in rooms_controller to respond with json
+2. Add route for rooms_controller#preload
+3. Add AJAX for retriving reservations in _form.html.erb partial
+4. Add reservations to calendar
+5. Cant select date before and after reservation and remove disabled when selected GIT - 

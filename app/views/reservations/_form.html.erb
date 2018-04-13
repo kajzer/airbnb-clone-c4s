@@ -48,12 +48,49 @@
 
 
 <script>
+
+    function checkDate(date) {
+        dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+        return [$.inArray(dmy, unavailableDate) == -1];
+    }
+    
     $(function() {
-        $('#reservation_start_date').datepicker({
-            dateFormat: 'dd-mm-yy'
+        unavailableDate = [];
+        
+        $.ajax({
+            url: '<%= preload_room_path(@room) %>',
+            dataType: 'json',
+            success: function(data) {
+                $.each(data, function(arrID, arrValue) {
+                    for(var d = new Date(arrValue.start_date); d <= new Date(arrValue.end_date); d.setDate(d.getDate() + 1)) {
+                        unavailableDate.push($.datepicker.formatDate('d-m-yy', d));
+                    }   
+                });
+                
+                $('#reservation_start_date').datepicker({
+                    dateFormat: 'dd-mm-yy',
+                    minDate: 0,
+                    maxDate: '3m',
+                    beforeShowDay: checkDate,
+                    onSelect: function(selected) {
+                        $('#reservation_end_date').datepicker("option", "minDate", selected);
+                        $('#reservation_end_date').attr("disabled", false);
+                    }
+                });
+                
+                $('#reservation_end_date').datepicker({
+                    dateFormat: 'dd-mm-yy',
+                    minDate: 0,
+                    maxDate: '3m',
+                    beforeShowDay: checkDate,
+                    onSelect: function(selected) {
+                        $('#reservation_start_date').datepicker("option", "maxDate", selected);
+                    }
+                });
+            }
         });
-        $('#reservation_end_date').datepicker({
-            dateFormat: 'dd-mm-yy'
-        });
-    })
+        
+        
+
+    });
 </script>
