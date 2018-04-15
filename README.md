@@ -254,4 +254,11 @@
 3. Create views/reviews/_host_form.html.erb
 4. Add button to your_trips with partial
 5. Add button to your_reservations partial
-6. Change modal id to be dynamic in views GIT - 
+6. Change modal id to be dynamic in views GIT - bfd068b
+
+### Create Show Reviews Page
+1. Add instance variable to rooms_controller
+2. Add instance variable to users_controller to display reviews as aguest and as a host
+3. Create reviews/_guest_list.html.erb
+4. Create reviews/_host_list.html.erb
+5. Update room page and user page with comments partials GIT - 
