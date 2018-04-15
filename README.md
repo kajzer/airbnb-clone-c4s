@@ -225,4 +225,9 @@
 3. Add view for reservations
 4. Copy sidebar from reservations to trips and listings
 5. Update links in shared/_navbar.html.erb
-6. Add button to navbar GIT - 
+6. Add button to navbar GIT - 849ac49
+
+### Modify User Profile Page
+1. Add @rooms to users_controller
+2. Modify show.html.erb to show if user confirmed email or signuped with FB
+3. Add rooms to profile GIT - 
