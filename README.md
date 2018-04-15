@@ -261,4 +261,14 @@
 2. Add instance variable to users_controller to display reviews as aguest and as a host
 3. Create reviews/_guest_list.html.erb
 4. Create reviews/_host_list.html.erb
-5. Update room page and user page with comments partials GIT - 
+5. Update room page and user page with comments partials GIT - b18f765
+
+### Adding jquery raty
+1. Create jquery.raty.js and paste from [Raty](https://github.com/wbotelhos/raty/blob/master/lib/jquery.raty.js)
+2. Add images from folder from tutorial to assets/images
+
+### Add stars to reviews
+1. Add stars to guest_form and host_form
+2. Add stars to rooms/show.html.erb
+3. Add stars to guest_list and host 
+4. Add id for modals GIT - 
