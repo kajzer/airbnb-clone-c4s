@@ -241,4 +241,9 @@
 6. remove every belongs_to from review.rb model
 7. Add has_many :guest_reviews to room.rb and helper method
 8. Add has_many :guest_reviews, class_name: "GuestReview", foreign_key: "guest_id" to user.rb as well for Host
-9. GIT - 
+9. GIT - bbddd3d
+
+### Creating Reviews Controller[Complicated!!!]
+1. Add host_reviews_controller.rb
+2. Copy to guest_reviews_controller.rb
+3. Add routes
