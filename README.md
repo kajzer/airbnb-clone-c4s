@@ -230,4 +230,15 @@
 ### Modify User Profile Page
 1. Add @rooms to users_controller
 2. Modify show.html.erb to show if user confirmed email or signuped with FB
-3. Add rooms to profile GIT - 
+3. Add rooms to profile GIT - 69ef243
+
+### Creating Reviews Model
+1. rails g model Review comment:text star:integer room:references reservation:references guest:references host:references type
+2. rails g model GuestReview --parent=Review --migration=false
+3. rails g model HostReview --parent=Review --migration=false
+4. add default: 1 to star in migration
+5. add belongs_to :guest, class_name: "User" to guest_review model
+6. remove every belongs_to from review.rb model
+7. Add has_many :guest_reviews to room.rb and helper method
+8. Add has_many :guest_reviews, class_name: "GuestReview", foreign_key: "guest_id" to user.rb as well for Host
+9. GIT - 
