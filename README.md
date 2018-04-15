@@ -214,7 +214,15 @@
 5. Add js logic to display preivew - nights, price, total etc
 6. Add css for message GIT - d429a37
 
-### Create Yout Trips Page
+### Create Your Trips Page
 1. Add action your_trips in reservations_controller
 2. Add route for trips
-3. Create view for trips
+3. Create view for trips GIT - db796aa
+
+### Create Your Reservations Page
+1. Add action your_reservations in reservations_controller
+2. Add route
+3. Add view for reservations
+4. Copy sidebar from reservations to trips and listings
+5. Update links in shared/_navbar.html.erb
+6. Add button to navbar GIT - 
