@@ -18,6 +18,7 @@
              </div>
         </div>
         
+        <h4><span class="message-alert text-center" id="message"></span></h4>
         <div id="preview" style="display: none">
             <table class="reservation-table">
                 <tbody>
@@ -27,7 +28,7 @@
                     </tr>
                     <tr>
                         <td>Night(s)</td>
-                        <td class="text-right">x <span id="reservation_days"></span></td>
+                        <td class="text-right">x <span id="reservation_nights"></span></td>
                     </tr>
                     <tr>
                         <td class="total">Total</td>
@@ -39,7 +40,7 @@
         
         <br/>
         
-        <%= f.submit "Book Now", class: "btn btn-normal btn-block" %>
+        <%= f.submit "Book Now", id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
     <% end %>
         
     </div>
@@ -75,6 +76,36 @@
                     onSelect: function(selected) {
                         $('#reservation_end_date').datepicker("option", "minDate", selected);
                         $('#reservation_end_date').attr("disabled", false);
+                        
+                        
+                        var start_date = $('#reservation_start_date').datepicker('getDate');
+                        var end_date = $('#reservation_end_date').datepicker('getDate');
+                        var nights = (end_date - start_date)/1000/60/60/24 + 1;
+                        
+                        var input = {
+                            'start_date': start_date,
+                            'end_date': end_date
+                        }
+                        
+                        $.ajax({
+                           url: '<%= preview_room_path(@room) %>',
+                           data: input,
+                           success: function(data) {
+                               if(data.conflict) {
+                                   $('#message').text("This date range is not avaliable.");
+                                   $('#preview').hide();
+                                   $('#btn_book').attr('disabled', true);
+                               } else {
+                                   $('#message').text("");
+                                   $('#preview').show();
+                                   $('#btn_book').attr('disabled', false);
+                                   
+                                   var total = nights * <%= @room.price %>
+                                   $('#reservation_nights').text(nights);
+                                   $('#reservation_total').text(total);
+                               }
+                           }
+                        });                        
                     }
                 });
                 
@@ -85,6 +116,35 @@
                     beforeShowDay: checkDate,
                     onSelect: function(selected) {
                         $('#reservation_start_date').datepicker("option", "maxDate", selected);
+                        
+                        var start_date = $('#reservation_start_date').datepicker('getDate');
+                        var end_date = $('#reservation_end_date').datepicker('getDate');
+                        var nights = (end_date - start_date)/1000/60/60/24 + 1;
+                        
+                        var input = {
+                            'start_date': start_date,
+                            'end_date': end_date
+                        }
+                        
+                        $.ajax({
+                           url: '<%= preview_room_path(@room) %>',
+                           data: input,
+                           success: function(data) {
+                               if(data.conflict) {
+                                   $('#message').text("This date range is not avaliable.");
+                                   $('#preview').hide();
+                                   $('#btn_book').attr('disabled', true);
+                               } else {
+                                   $('#message').text("");
+                                   $('#preview').show();
+                                   $('#btn_book').attr('disabled', false);
+                                   
+                                   var total = nights * <%= @room.price %>
+                                   $('#reservation_nights').text(nights);
+                                   $('#reservation_total').text(total);
+                               }
+                           }
+                        });
                     }
                 });
             }

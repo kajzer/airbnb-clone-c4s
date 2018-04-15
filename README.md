@@ -204,4 +204,12 @@
 2. Add route for rooms_controller#preload
 3. Add AJAX for retriving reservations in _form.html.erb partial
 4. Add reservations to calendar
-5. Cant select date before and after reservation and remove disabled when selected GIT - 
+5. Cant select date before and after reservation and remove disabled when selected GIT - 5656f89
+
+### AJAX for end date
+1. Add is_conflivt private method in rooms_controller
+2. Add action preview in rooms_controller
+3. Add route preivew
+4. Add js logic in view reservations/_form.html.erb to handle request to rooms/:id/preview
+5. Add js logic to display preivew - nights, price, total etc
+6. Add css for message GIT - 
