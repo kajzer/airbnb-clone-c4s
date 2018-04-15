@@ -232,7 +232,7 @@
 2. Modify show.html.erb to show if user confirmed email or signuped with FB
 3. Add rooms to profile GIT - 69ef243
 
-### Creating Reviews Model
+### Creating Reviews Model[Complicated]
 1. rails g model Review comment:text star:integer room:references reservation:references guest:references host:references type
 2. rails g model GuestReview --parent=Review --migration=false
 3. rails g model HostReview --parent=Review --migration=false
@@ -246,4 +246,12 @@
 ### Creating Reviews Controller[Complicated!!!]
 1. Add host_reviews_controller.rb
 2. Copy to guest_reviews_controller.rb
-3. Add routes
+3. Add routes GIT - 4370947
+
+### Creating Reviews View
+1. Get code for bootstrap modal
+2. Create views/reviews/_guest_form.html.erb
+3. Create views/reviews/_host_form.html.erb
+4. Add button to your_trips with partial
+5. Add button to your_reservations partial
+6. Change modal id to be dynamic in views GIT - 
