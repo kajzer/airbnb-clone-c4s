@@ -212,4 +212,9 @@
 3. Add route preivew
 4. Add js logic in view reservations/_form.html.erb to handle request to rooms/:id/preview
 5. Add js logic to display preivew - nights, price, total etc
-6. Add css for message GIT - 
+6. Add css for message GIT - d429a37
+
+### Create Yout Trips Page
+1. Add action your_trips in reservations_controller
+2. Add route for trips
+3. Create view for trips
