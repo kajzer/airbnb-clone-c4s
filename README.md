@@ -318,4 +318,13 @@
 1. Change home page with partial
 2. Change show user to use partial
 3. Add some information to _rooms_list.html.erb partial
-4. Add script for stars and reviews count GIT - 
+4. Add script for stars and reviews count GIT - b7a926d
+
+### Auto Location Suggestion
+1. Use [geocmplete](https://github.com/ubilabs/geocomplete)
+2. Get google maps api key
+3. Add link to application.html.erb
+4. Create geocomplete.js file in javascripts and copy contents from geocomplete github
+5. Add id to form in home.html.erb and script
+6. Add css to hide scrollbars in search
+7. Add autolocation to manage listing

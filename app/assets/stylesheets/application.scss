@@ -327,6 +327,12 @@ a {
     height: 100%;
 }
 
+// Hide scrollbars
+#left::-webkit-scrollbar { width: 0 !important }
+#left { -ms-overflow-style: none; }
+#left { overflow: -moz-scrollbars-none; }
+
+
 #right {
     position: fixed;
     top: 0;
