@@ -289,4 +289,11 @@
 ### Create search function
 1. Add gem 'ransack'
 2. Implement search in pages_controller.rb
-3. Add code to search.html.erb to display results GIT - 
+3. Add code to search.html.erb to display results GIT - 53ba74a
+
+### Add Google Map
+1. Transform search criteria to look better on search.html.erb
+2. Add button to hide and open filters
+3. Add google map with all found rooms
+4. Add css for class of map markers
+5. Add search form to navbar GIT - 
