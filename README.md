@@ -307,4 +307,9 @@
 ### Add jquery pricing slider
 1. Add require rule to assets/application.js
 2. Add jquery to search.html.erb for sliders
-3. Add some styling with jquery GIT - 
+3. Add some styling with jquery GIT - 8a3b0fa
+
+### Modify Home Page
+1. Add images and h1 to home.html.erb
+2. Add images to assets/images
+3. Add stylesheet css rules
