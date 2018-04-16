@@ -296,4 +296,10 @@
 2. Add button to hide and open filters
 3. Add google map with all found rooms
 4. Add css for class of map markers
-5. Add search form to navbar GIT - 
+5. Add search form to navbar GIT - f656a6f
+
+### AJAX Searching
+1. Create rooms/_room_list.html.erb
+2. Create /pages/search.js.erb
+3. Change serach.html.erb
+4. Update google map with ajax GIT - 
