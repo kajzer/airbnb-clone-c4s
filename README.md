@@ -271,4 +271,10 @@
 1. Add stars to guest_form and host_form
 2. Add stars to rooms/show.html.erb
 3. Add stars to guest_list and host 
-4. Add id for modals GIT - 
+4. Add id for modals GIT - a2bd81e
+
+### Update Home Page
+1. Add @rooms to pages_controller.rb
+2. Modify pages#home view
+3. Add search form to home view
+4. Add jquery for datepicker GIT - 

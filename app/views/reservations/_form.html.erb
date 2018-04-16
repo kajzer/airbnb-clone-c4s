@@ -91,6 +91,7 @@
                            url: '<%= preview_room_path(@room) %>',
                            data: input,
                            success: function(data) {
+
                                if(data.conflict) {
                                    $('#message').text("This date range is not avaliable.");
                                    $('#preview').hide();
