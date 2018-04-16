@@ -312,4 +312,10 @@
 ### Modify Home Page
 1. Add images and h1 to home.html.erb
 2. Add images to assets/images
-3. Add stylesheet css rules
+3. Add stylesheet css rules GIT - 21d9566
+
+### Improving Home Page
+1. Change home page with partial
+2. Change show user to use partial
+3. Add some information to _rooms_list.html.erb partial
+4. Add script for stars and reviews count GIT - 
