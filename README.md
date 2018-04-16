@@ -1,4 +1,4 @@
-# Airbnb clone
+# Airbnb clone Airpikachu
 
 
 
@@ -330,3 +330,12 @@
 7. Add autolocation to manage listing 
 
 ### Final commit of Airpikachu GIT - eb40636
+
+# ----------Airkong------------------
+
+### Dashboard Controller
+1. Change name to AirKong in navbar and layout:P
+2. Add dashboards_controller.rb
+3. Add route for index action in dashboards_controller
+4. Add rule for devise to redirect to dashboar after user sign in GIT - 
+
