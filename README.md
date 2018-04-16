@@ -327,4 +327,6 @@
 4. Create geocomplete.js file in javascripts and copy contents from geocomplete github
 5. Add id to form in home.html.erb and script
 6. Add css to hide scrollbars in search
-7. Add autolocation to manage listing
+7. Add autolocation to manage listing 
+
+### Final commit of Airpikachu GIT - eb40636
