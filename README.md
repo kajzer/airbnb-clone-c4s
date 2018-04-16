@@ -277,4 +277,11 @@
 1. Add @rooms to pages_controller.rb
 2. Modify pages#home view
 3. Add search form to home view
-4. Add jquery for datepicker GIT - 
+4. Add jquery for datepicker GIT - d3df3d7
+
+### Creating Search Page
+1. In page controller add action search
+2. Add search to routes.rb
+3. Add file views/pages/search.html.erb
+4. Add stylesheet rules for search page
+5. Add search fields to view search.html.erb GIT - 
