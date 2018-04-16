@@ -3,7 +3,7 @@
         <!-- SEARCH PANEL -->
         <div class="row">
             <br/>
-            <div class="collapse" id="collapsePanel">
+            <div id="collapsePanel">
                 
                 <%= search_form_for @search, url: search_path do |f| %>
                 
@@ -13,11 +13,11 @@
                         </div>
                         <div class="col-md-2">
                             <label>Min Price</label>
-                            <%= f.text_field :price_gteq, class: "form_control" %>
+                            <%= f.text_field :price_gteq, class: "form-control" %>
                         </div>
                         <div class="col-md-2">
                             <label>Max Price</label>
-                            <%= f.text_field :price_lteq, class: "form_control" %>
+                            <%= f.text_field :price_lteq, class: "form-control" %>
                         </div>
                     </div>
                     <hr/>
@@ -27,7 +27,7 @@
                             <%= text_field_tag :start_date, params[:start_date], readonly: true, placeholder: "Start Date", class: "form-control datepicker" %>
                         </div>
                         <div class="col-md-6">
-                            <%= text_field_tag :end_date, params[:end_date, readonly: true, placeholder: "End Date", class: "form-control datepicker" %>
+                            <%= text_field_tag :end_date, params[:end_date], readonly: true, placeholder: "End Date", class: "form-control datepicker" %>
                         </div>
                     </div>
                     <hr/>
@@ -89,12 +89,30 @@
                     <div class="row text-center">
                         <%= f.submit "Search", class: "btn btn-form" %>
                     </div>
-                    
                 <% end %>
-                
             </div>
+            <br/>
+
+            <div class="row">
+                <% @arrRooms.each do |room| %>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading preview">
+                                <%= image_tag room.cover_photo(:medium) %>
+                            </div>
+                            <div class="panel-body">
+                                <%= link_to room.listing_name, room %>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+
+
         </div>
     </div>
+    
+    
     <div id="right">
         <!-- GOOGLE MAP -->
     </div>

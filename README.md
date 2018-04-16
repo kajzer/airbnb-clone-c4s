@@ -284,4 +284,9 @@
 2. Add search to routes.rb
 3. Add file views/pages/search.html.erb
 4. Add stylesheet rules for search page
-5. Add search fields to view search.html.erb GIT - 
+5. Add search fields to view search.html.erb GIT - e3ce7e0
+
+### Create search function
+1. Add gem 'ransack'
+2. Implement search in pages_controller.rb
+3. Add code to search.html.erb to display results GIT - 
