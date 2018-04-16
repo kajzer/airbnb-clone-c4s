@@ -302,4 +302,9 @@
 1. Create rooms/_room_list.html.erb
 2. Create /pages/search.js.erb
 3. Change serach.html.erb
-4. Update google map with ajax GIT - 
+4. Update google map with ajax GIT - 0af3739
+
+### Add jquery pricing slider
+1. Add require rule to assets/application.js
+2. Add jquery to search.html.erb for sliders
+3. Add some styling with jquery GIT - 
