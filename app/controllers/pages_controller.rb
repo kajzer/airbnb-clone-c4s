@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
   
   def search
-    # Did the user provided location
+    # Did the user provide location
     if params[:search].present? && params[:search].strip != ""
       session[:loc_search] = params[:search]
     end

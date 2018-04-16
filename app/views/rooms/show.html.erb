@@ -19,7 +19,7 @@
             </div>
             <div class="col-md-4 text-center">
                 <%= image_tag avatar_url(@room.user), class: "img-circle avatar-large" %> <br/><br/>
-                <%= @room.user.fullname %>
+                <%= link_to @room.user.fullname, user_path(@room.user) %>
             
             </div>
         </div>

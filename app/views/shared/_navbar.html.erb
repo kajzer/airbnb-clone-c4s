@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0px">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -33,6 +33,7 @@
                   <%= current_user.fullname %> <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
+                <li><%= link_to "Dashboard", dashboard_path %></li>
                 <li><%= link_to "Mange Listings", rooms_path %></li>
                 <li><%= link_to "List Your Space", new_room_path %></li>
                 <li><%= link_to "Your Reservations", your_reservations_path %></li>
@@ -48,3 +49,14 @@
     </div><!--/.nav-collapse -->
   </div>
 </nav>
+
+<% if (user_signed_in?) && !current_page?(root_path) && !current_page?("/rooms/#{params[:id]}") %>
+  <nav class="navbar navbar-default" style="background-color: #565A5C">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li <% if current_page?(dashboard_path) %> class="active" <% end %>><%= link_to "Dashboard", dashboard_path %></li>
+        <li <% if current_page?(rooms_path) %> class="active" <% end %>><%= link_to "Manage Listings", rooms_path %></li>
+      </ul>
+    </div>
+  </nav>
+<% end %>

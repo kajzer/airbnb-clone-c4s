@@ -337,5 +337,13 @@
 1. Change name to AirKong in navbar and layout:P
 2. Add dashboards_controller.rb
 3. Add route for index action in dashboards_controller
-4. Add rule for devise to redirect to dashboar after user sign in GIT - 
+4. Add rule for devise to redirect to dashboar after user sign in GIT - 6802074
+
+### Dashboard View
+1. Add views/dashboards, add index.html.erb
+2. Additional - add link to user profile in rooms/show.html.erb - not in tutorial
+3. Add simple structrue to the dashboard
+4. Add style to navbar and more links in dropdown
+5. Add additional navbar for sign in users on specific pages
+6. Add active links to new navbar GIT - 
 
