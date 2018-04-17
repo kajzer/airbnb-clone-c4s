@@ -46,4 +46,6 @@ Rails.application.routes.draw do
     end
   end
   
+  get '/host_calendar', to: "calendars#host"
+  
 end

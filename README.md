@@ -387,7 +387,11 @@
 ### Reservation status
 1. Add conditional to show review button only on approved reservations in views
 2. Update logic on reservation form in rooms_controller
-3. Update search action in pages_controller GIT - 
+3. Update search action in pages_controller GIT - 5deddf6
 
-### 
+### Calendar Controller
+1. Add gems fullcalendar-rails and momentjs-rails [link](https://github.com/bokmann/fullcalendar-rails)
+2. Implement js and css in application.js and .scss
+3. Create calendars_controller.rb
+4. Add routes GIT - 
 
