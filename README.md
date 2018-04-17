@@ -345,5 +345,14 @@
 3. Add simple structrue to the dashboard
 4. Add style to navbar and more links in dropdown
 5. Add additional navbar for sign in users on specific pages
-6. Add active links to new navbar GIT - 
+6. Add active links to new navbar GIT - cadab30
+
+### Create acc on twilio.com
+
+### SMS Configuration
+1. Add gem twilio-ruby
+2. Create file in initializers twilio.rb
+3. Add twilio acc info to application.yml (figaro)
+4. rails g migration AddPinAndPhoneVerifiedToUser pin phone_verified:boolean
+5. Add generate_pin, send_pin, verify_pin in user.rb model GIT - 
 

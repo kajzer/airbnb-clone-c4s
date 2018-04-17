@@ -46,6 +46,9 @@ gem 'geocoder', '~>1.4'
 gem 'jquery-ui-rails', '~> 5.0'
 gem 'ransack', '~> 1.7'
 
+# -----AirKong--------
+gem 'twilio-ruby', '~> 4.11.1'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
