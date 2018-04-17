@@ -358,5 +358,10 @@
 
 ### SMS Controller
 1. Create update_phone_number, verify_phone_number actions in users_controller
-2. Add routes GIT - 
+2. Add routes GIT - e3362cb
+
+### SMS View
+1. Modify views/devise/registrations/edit.html.erb
+2. Add modals for verification and updating phone number [some validations would be nice]
+3. Add icon for phone number verification in dashboards/index and users/show GIT - 
 
