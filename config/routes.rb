@@ -6,7 +6,13 @@ Rails.application.routes.draw do
               path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration'},
               controllers: {omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
               
-  resources :users, only: [:show]
+  resources :users, only: [:show] do 
+    member do
+      post '/verify_phone_number', to: 'users#verify_phone_number'
+      patch '/update_phone_number', to: 'users#update_phone_number'
+    end
+  end
+  
   resources :rooms, except: [:edit] do
     member do 
       get 'listing'

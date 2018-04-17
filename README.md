@@ -354,5 +354,9 @@
 2. Create file in initializers twilio.rb
 3. Add twilio acc info to application.yml (figaro)
 4. rails g migration AddPinAndPhoneVerifiedToUser pin phone_verified:boolean
-5. Add generate_pin, send_pin, verify_pin in user.rb model GIT - 
+5. Add generate_pin, send_pin, verify_pin in user.rb model GIT - b249c73
+
+### SMS Controller
+1. Create update_phone_number, verify_phone_number actions in users_controller
+2. Add routes GIT - 
 
