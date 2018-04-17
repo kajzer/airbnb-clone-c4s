@@ -393,5 +393,10 @@
 1. Add gems fullcalendar-rails and momentjs-rails [link](https://github.com/bokmann/fullcalendar-rails)
 2. Implement js and css in application.js and .scss
 3. Create calendars_controller.rb
-4. Add routes GIT - 
+4. Add routes GIT - a98c0b7
+
+### Host Calendar Page
+1. Create calendars/host.html.erb
+2. Correct image display in calendar controller
+3. Add css for calendar GIT - 
 

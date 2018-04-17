@@ -1,0 +1,38 @@
+<div id="calendar"></div>
+
+<script>
+
+    window.reservations = <%= raw @events.to_json %>
+    // console.log(reservations);
+    
+    function showReservations(data) {
+        return data.map(function (e) {
+            return {
+                name: e.fullname,
+                start: e['start_date'],
+                end: e['end_date'],
+                avatar: e.image,
+                status: e.status
+            }
+        })
+    }
+    
+    $('#calendar').fullCalendar({
+       header: {
+           left: 'title',
+           center: '',
+           right: 'prev,next'
+       },
+       defaultDate: $('#start-date').val(),
+       events: showReservations(reservations),
+       eventRender: function(event, element, view) {
+           return $(`
+           <a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end">
+               <div class ="fc-content ${event.status}">
+                   <span class="fc-title"><img class="img-circle avatar-small" src="${event.avatar}"> ${event.name} </span>
+               </div>
+           </a>
+           `);
+       }
+    });
+</script>

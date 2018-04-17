@@ -365,3 +365,34 @@ a {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+// Calendar
+.fc-content.Waiting {
+    background-color: #C9CC60;
+}
+.fc-past {
+    background-color: lightgray;
+}
+
+.fc-day {
+    position: relative;
+}
+
+.fc-content {
+    background-color: #00A699;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.fc-event {
+    border: 0px;
+    background-color: transparent;
+}
+
+.fc-title {
+    font-size: 14px;
+    position: relative;
+    top: 7px;
+    left: 20px;
+}
+
