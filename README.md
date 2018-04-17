@@ -369,5 +369,12 @@
 1. rails g migration AddInstantToRooms instant:integer
 2. rails g migration AddStatusToReservations status:integer
 3. add code to migrations for default value
-4. Add enum attributes to room and reservation model GIT - 
+4. Add enum attributes to room and reservation model GIT - feb8e01
+
+### Instant/Request Booking Function
+1. Add :instant in room_params in rooms_controller
+2. Add Booking Type select to rooms/new.html.erb
+3. Add Booking Type select to rooms/listing.html.erb
+4. Add logic to reservations_controller
+5. Add diffrent buttons to reservaions/_form.html.erb GIT - 
 
