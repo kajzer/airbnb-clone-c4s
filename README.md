@@ -382,5 +382,12 @@
 1. Create approve and decline in reservaions_controller
 2. Add routes for new actions
 3. Add buttons for approving/declining in reservations/your_reservations
-4. Show status in your_trips.html.erb GIT - 
+4. Show status in your_trips.html.erb GIT - f97f6e7
+
+### Reservation status
+1. Add conditional to show review button only on approved reservations in views
+2. Update logic on reservation form in rooms_controller
+3. Update search action in pages_controller GIT - 
+
+### 
 

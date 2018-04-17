@@ -43,7 +43,8 @@
                                 </span>
                             </div>
                             <div class="col-md-3 text-right">
-                                <%= render partial: "reviews/host_form", locals: {reservation: reservation} %>
+    
+                                <%= render partial: "reviews/host_form", locals: {reservation: reservation} if reservation.Approved? %>
                             </div>
                         </div>
                         <hr/>
