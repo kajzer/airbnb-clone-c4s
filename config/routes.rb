@@ -39,4 +39,11 @@ Rails.application.routes.draw do
   # ----- Airkong -----
   get 'dashboard', to: 'dashboards#index'
   
+  resources :reservations, only: [:approve, :decline] do
+    member do
+      post '/approve', to: "reservations#approve"
+      post '/decline', to: "reservations#decline"
+    end
+  end
+  
 end

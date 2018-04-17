@@ -19,6 +19,14 @@
                             <div class="col-md-2">
                                 Start: <%= reservation.start_date.strftime('%v') %> <br/>
                                 &nbsp;&nbsp;End: <%= reservation.end_date.strftime('%v') %>
+                                
+                                <p><%= reservation.status %></p>
+                                <div class="form-inlne">
+                                    <% if reservation.Waiting? %>
+                                        <%= link_to approve_reservation_path(reservation), method: :post do %><i class="fa fa-thumbs-up fa-lg"></i><% end %> | 
+                                        <%= link_to decline_reservation_path(reservation), method: :post do %><i class="fa fa-thumbs-down fa-lg"></i><% end %>
+                                    <% end %>
+                                </div>
                             </div>
                             <div class="col-md-2">
                                 <%= link_to room_path(reservation.room) do %>

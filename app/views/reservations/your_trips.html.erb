@@ -17,6 +17,8 @@
                         <div class="col-md-2">
                             Start: <%= trip.start_date.strftime('%v') %> <br/>
                             &nbsp;&nbsp;End: <%= trip.end_date.strftime('%v') %>
+                            
+                            <p><%= trip.status %></p>
                         </div>
                         <div class="col-md-2">
                             <%= link_to room_path(trip.room) do %>

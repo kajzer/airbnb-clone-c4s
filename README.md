@@ -376,5 +376,11 @@
 2. Add Booking Type select to rooms/new.html.erb
 3. Add Booking Type select to rooms/listing.html.erb
 4. Add logic to reservations_controller
-5. Add diffrent buttons to reservaions/_form.html.erb GIT - 
+5. Add diffrent buttons to reservaions/_form.html.erb GIT - dbbf31f
+
+### Approve/Decline Reservations
+1. Create approve and decline in reservaions_controller
+2. Add routes for new actions
+3. Add buttons for approving/declining in reservations/your_reservations
+4. Show status in your_trips.html.erb GIT - 
 
