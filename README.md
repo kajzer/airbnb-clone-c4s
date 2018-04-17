@@ -363,5 +363,11 @@
 ### SMS View
 1. Modify views/devise/registrations/edit.html.erb
 2. Add modals for verification and updating phone number [some validations would be nice]
-3. Add icon for phone number verification in dashboards/index and users/show GIT - 
+3. Add icon for phone number verification in dashboards/index and users/show GIT - c426a61
+
+### Instant/Request Booking Model
+1. rails g migration AddInstantToRooms instant:integer
+2. rails g migration AddStatusToReservations status:integer
+3. add code to migrations for default value
+4. Add enum attributes to room and reservation model GIT - 
 
