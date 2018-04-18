@@ -409,5 +409,13 @@
 
 ### Calendar Next/Back
 1. Add js to host.html.erb to trigger on change when pressing next/prev buttons
-2. Add host calendar link to navbar GIT - 
+2. Add host calendar link to navbar GIT - 2415af6
+
+### Calendar avaliability model
+1. Add price display to host calendar
+2. Add css for price
+3. rails g model Calendar day:date price:integer status:integer room:references
+4. Add relation to room.rb
+5. Add enum to calendar.rb
+6. Add routes as nested resource in rooms GIT - 
 

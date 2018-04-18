@@ -55,6 +55,11 @@
                </div>
            </a>
            `);
+       },
+       dayRender: function(date, cell) {
+           <% if !@rooms.blank? %>
+               cell.append('<span class="day-price">' + '$<%= @room.price %>' + '</span>')
+           <% end %>
        }
     });
     
