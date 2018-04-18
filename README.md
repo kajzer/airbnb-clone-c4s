@@ -422,5 +422,12 @@
 ### Calendar Availability Form
 1. Add /calendars/_form.html.erb
 2. Add form to host calendar
-3. Add js code for opening modal 
+3. Add js code for opening modal GIT - 4cbcd52
+
+### Calendar Pricing
+1. Add style for radio buttons
+2. Add create action and calendar_params to calendars_ccontroler
+3. Modify host action in calendars_controller
+4. Add in dayRender function in host.html.erb to add days data to calendar
+5. Add reloading for arrows to host.js.erb
 
