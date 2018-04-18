@@ -436,5 +436,9 @@
 2. Add require card to application.js
 3. Create initializers/stripe.rb
 4. Add keys to application.yml
-5. rails g migration AddStripeIdToUser stripe_id GIT - 
+5. rails g migration AddStripeIdToUser stripe_id GIT - 2d57b03
+
+### Payment Controller
+1. Add payment and add_cart actions in users_controller
+2. Add routes
 
