@@ -429,5 +429,12 @@
 2. Add create action and calendar_params to calendars_ccontroler
 3. Modify host action in calendars_controller
 4. Add in dayRender function in host.html.erb to add days data to calendar
-5. Add reloading for arrows to host.js.erb
+5. Add reloading for arrows to host.js.erb GIT - 8adeb1b
+
+### Stripe
+1. Add gem stripe and rails-assets-card
+2. Add require card to application.js
+3. Create initializers/stripe.rb
+4. Add keys to application.yml
+5. rails g migration AddStripeIdToUser stripe_id GIT - 
 
