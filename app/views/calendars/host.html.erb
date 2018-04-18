@@ -11,7 +11,7 @@
                 </div>
             </div>
             
-            <%= f.hidden_field :start_date, id: "start-date", value: params[:start_date] %>
+            <%= f.hidden_field :start_date, id: "start-date", value: params[:start_date], onchange: "$(this.form).submit()" %>
         <% end %>
     </div>
 <% end %>
@@ -56,5 +56,18 @@
            </a>
            `);
        }
+    });
+    
+    $('.fc-prev-button'). click(function() {
+        var current = new Date($('#start-date').val());
+        var prev = new Date(current.getFullYear(), current.getMonth() - 1, 1);
+        $('#start-date').val(moment(prev).format('YYYY-MM-DD'));
+        $('#start-date').trigger('change');
+    });
+    $('.fc-next-button'). click(function() {
+        var current = new Date($('#start-date').val());
+        var next = new Date(current.getFullYear(), current.getMonth() + 1, 1);
+        $('#start-date').val(moment(next).format('YYYY-MM-DD'));
+        $('#start-date').trigger('change');
     });
 </script>

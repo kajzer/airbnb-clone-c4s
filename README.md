@@ -405,5 +405,9 @@
 2. Add search form for changing rooms
 3. Add logic to controller for ransack search
 4. Asynchronous reload of calendar. Add remote to form in view.
-5. Add host.je.erb
+5. Add host.je.erb GIT - bcc8514
+
+### Calendar Next/Back
+1. Add js to host.html.erb to trigger on change when pressing next/prev buttons
+2. Add host calendar link to navbar GIT - 
 
