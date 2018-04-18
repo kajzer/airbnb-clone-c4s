@@ -1,0 +1,74 @@
+<div class="modal fade" id="new_calendar">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <%= form_for [@room, Calendar.new] do |f| %>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               <%= f.text_field :start_date, readonly: true, value: Date.today, class: "form-control datepicker" %> 
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               <%= f.text_field :end_date, readonly: true, value: Date.today, class: "form-control datepicker" %> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                            <div class="btn-group" data-toggle="buttons-radio">
+                                <%= f.collection_radio_buttons :status, Calendar.statuses, :first, :first, checked: Calendar.statuses.first do |b|
+                                    b.radio_button + b.label {b.text.split("_").join(" ").capitalize}
+                                end %>
+                            </div>
+                        </div>
+                        
+                        <div class="row new-pricing">
+                            <div class="col-md-10">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <%= f.text_field :price, class: "form-control", value: @room.price, required: true %>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <p style="margin-top: 10px">Per Night</p>
+                            </div>
+                        </div>
+                        
+                        <div class="no-pricing hide">
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.button "Save", type: :submit, class: "btn btn-success" %>
+                        </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        var notAvailable = $('#calendar_status_not_available'),
+            available = $('#calendar_status_available');
+        
+        notAvailable.click(function() {
+            $('.no-pricing').show();
+            $('.new-pricing').hide();
+        });
+        
+        available.click(function() {
+            $('.no-pricing').hide();
+            $('.new-pricing').show();
+        });
+        
+    })
+</script>

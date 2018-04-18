@@ -417,5 +417,10 @@
 3. rails g model Calendar day:date price:integer status:integer room:references
 4. Add relation to room.rb
 5. Add enum to calendar.rb
-6. Add routes as nested resource in rooms GIT - 
+6. Add routes as nested resource in rooms GIT - f4c397c
+
+### Calendar Availability Form
+1. Add /calendars/_form.html.erb
+2. Add form to host calendar
+3. Add js code for opening modal 
 
