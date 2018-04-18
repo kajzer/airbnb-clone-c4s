@@ -1,0 +1,5 @@
+reservations = <%= raw @events.to_json %>
+
+$('#calendar').fullCalendar('removeEvents');
+$('#calendar').fullCalendar('addEventSource', showReservations(reservations));
+$('#calendar').fullCalendar('rerenderEvents');

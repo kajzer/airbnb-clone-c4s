@@ -398,5 +398,12 @@
 ### Host Calendar Page
 1. Create calendars/host.html.erb
 2. Correct image display in calendar controller
-3. Add css for calendar GIT - 
+3. Add css for calendar GIT - 96ce3af
+
+### Improving Host Calendar
+1. Add date checking in js in host.html.erb for dates so the reservation will display correctly
+2. Add search form for changing rooms
+3. Add logic to controller for ransack search
+4. Asynchronous reload of calendar. Add remote to form in view.
+5. Add host.je.erb
 

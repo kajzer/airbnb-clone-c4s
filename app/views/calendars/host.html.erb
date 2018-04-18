@@ -1,3 +1,21 @@
+<% if !@rooms.blank? %>
+    <div class="row">
+        <%= search_form_for @search, class: "form-group", remote: true, url: host_calendar_path do |f| %>
+            <div class="col-md-6 select">
+                <div class="form-group">
+                    <label>Your listings</label>
+                    <%= f.select :room_id, options_for_select(@rooms.collect {|u| [u.listing_name, u.id]}, params[:room_id]), {}, {
+                    onchange: "$(this.form).submit()",
+                    class: "form-control"
+                    } %>
+                </div>
+            </div>
+            
+            <%= f.hidden_field :start_date, id: "start-date", value: params[:start_date] %>
+        <% end %>
+    </div>
+<% end %>
+
 <div id="calendar"></div>
 
 <script>
@@ -7,6 +25,10 @@
     
     function showReservations(data) {
         return data.map(function (e) {
+            if (e['start_date'] !== e['end_date']) {
+                e['end_date'] = moment.utc(e['end_date']).add(1, 'days')
+            }
+            
             return {
                 name: e.fullname,
                 start: e['start_date'],
