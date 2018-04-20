@@ -440,5 +440,10 @@
 
 ### Payment Controller
 1. Add payment and add_cart actions in users_controller
-2. Add routes
+2. Add routes GIT - 02bbbd2
+
+### Payment Form
+1. Add users/payment.html.erb
+2. Add link to navbar
+3. Correct cvv to cvc in users_controller GIT - 
 
