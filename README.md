@@ -445,5 +445,9 @@
 ### Payment Form
 1. Add users/payment.html.erb
 2. Add link to navbar
-3. Correct cvv to cvc in users_controller GIT - 
+3. Correct cvv to cvc in users_controller GIT - 862ccbc
+
+### Reservation Charges
+1. Add privte charge method in reservation_controller
+2. Modify create action to use charge method GIT - 
 
