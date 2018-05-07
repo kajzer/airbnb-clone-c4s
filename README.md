@@ -455,6 +455,12 @@
 1. Remove existing form from payment.html.erb
 2. Problems with AddBlocker
 3. Copy css,js from code4startup becasue stripe changed the way
-4. Change users_controller GIt - 
+4. Change users_controller GIT - 528925a
+
+### Stripe Connect
+1. Configure Stripe Connect for payment
+2. Add gem 'omniauth-stripe-connect'
+3. Add omniauth configuration for stripe to initializers/devise.rb
+4. rails g migration AddMerchantIdToUser merchant_id GIT - 
 
 
