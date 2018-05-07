@@ -449,5 +449,12 @@
 
 ### Reservation Charges
 1. Add privte charge method in reservation_controller
-2. Modify create action to use charge method GIT - 
+2. Modify create action to use charge method GIT - 201e481
+
+### Improving Payment Form
+1. Remove existing form from payment.html.erb
+2. Problems with AddBlocker
+3. Copy css,js from code4startup becasue stripe changed the way
+4. Change users_controller GIt - 
+
 

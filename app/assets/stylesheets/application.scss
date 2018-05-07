@@ -412,3 +412,80 @@ a {
     right: 2px;
 }
 
+// Payment form
+
+.day-price {
+position: absolute;
+color: #EAA90B;
+bottom: 2px;
+right: 2px;
+}
+
+// PAYMENT form
+
+#add-card form {
+width: 480px;
+margin: 20px auto;
+}
+
+#add-card label {
+position: relative;
+color: #6A7C94;
+font-weight: 400;
+height: 48px;
+line-height: 48px;
+margin-bottom: 10px;
+display: block;
+}
+
+#add-card label > span {
+float: left;
+}
+
+.field {
+background: white;
+box-sizing: border-box;
+font-weight: 400;
+border: 1px solid #CFD7DF;
+border-radius: 24px;
+color: #32315E;
+outline: none;
+height: 48px;
+line-height: 48px;
+padding: 15px 20px;
+cursor: text;
+width: 76%;
+float: right;
+}
+
+.field::-webkit-input-placeholder { color: #CFD7DF; }
+.field::-moz-placeholder { color: #CFD7DF; }
+.field:-ms-input-placeholder { color: #CFD7DF; }
+
+.field:focus,
+.field.StripeElement--focus {
+border-color: #F99A52;
+}
+
+
+
+.outcome {
+float: left;
+width: 100%;
+padding-top: 8px;
+min-height: 20px;
+text-align: center;
+}
+
+.success, .error {
+display: none;
+font-size: 13px;
+}
+
+.success.visible, .error.visible {
+display: inline;
+}
+
+.error {
+color: #E4584C;
+}
