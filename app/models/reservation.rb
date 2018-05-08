@@ -17,4 +17,10 @@ class Reservation < ApplicationRecord
     .order(updated_at: :asc)
   }
   
+  scope :current_month_revenue, -> (user) {
+    joins(:room)
+    .where("rooms.user_id = ? AND reservations.updated_at >= ? AND reservations.status = ?", user.id, 1.month.ago, 1)
+    .order(updated_at: :asc)
+  }
+  
 end

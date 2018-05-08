@@ -482,7 +482,13 @@
 1. Add gem chartkick
 2. Add require rules to application.js
 3. Add scope to reservations model
-4. Create revenues_controller
-5. Add route for revenues controller 14:34
+4. Create revenues_controller 
+5. Add route for revenues controller GIT - 374a132
+
+### Revenue Chart Page
+1. Create revenues/index.html.erb view
+2. Add link to shared/navbar for charts
+3. Make nicer chart with all days of the week
+4. Add by myself month revenue chart GIT - 
 
 
