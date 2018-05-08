@@ -55,6 +55,8 @@ gem 'rails-assets-card', source: 'https://rails-assets.org'
 
 gem 'omniauth-stripe-connect', '~> 2.10.0'
 
+gem 'chartkick', '~> 2.2.4'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

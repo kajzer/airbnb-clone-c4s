@@ -476,6 +476,13 @@
 ### Revenue Splitting
 1. Add revenue spliting in reservations_controller
 2. Create method in user.rb to check if host is active
-3. Add to room_controller if statment to check if stripe is conected GIT - 
+3. Add to room_controller if statment to check if stripe is conected GIT - 39eabc1
+
+### Revenue Chart Settings
+1. Add gem chartkick
+2. Add require rules to application.js
+3. Add scope to reservations model
+4. Create revenues_controller
+5. Add route for revenues controller 14:34
 
 

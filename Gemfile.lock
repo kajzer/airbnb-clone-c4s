@@ -57,6 +57,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.2)
+    chartkick (2.2.5)
     climate_control (0.2.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
@@ -256,6 +257,7 @@ DEPENDENCIES
   aws-sdk (~> 2.8)
   bootstrap-sass (~> 3.3.7)
   byebug
+  chartkick (~> 2.2.4)
   coffee-rails (~> 4.2)
   devise (~> 4.2)
   figaro (~> 1.1, >= 1.1.1)
