@@ -471,7 +471,11 @@
 ### Payout Page
 1. Create view users/payout.html.erb
 2. Test connecting account to stripe
-3. Create link to go to dashboard in stripe for hosts
-4. 
+3. Create link to go to dashboard in stripe for hosts GIT - 871c999
+
+### Revenue Splitting
+1. Add revenue spliting in reservations_controller
+2. Create method in user.rb to check if host is active
+3. Add to room_controller if statment to check if stripe is conected GIT - 
 
 
