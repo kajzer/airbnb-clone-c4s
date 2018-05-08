@@ -461,6 +461,11 @@
 1. Configure Stripe Connect for payment
 2. Add gem 'omniauth-stripe-connect'
 3. Add omniauth configuration for stripe to initializers/devise.rb
-4. rails g migration AddMerchantIdToUser merchant_id GIT - 
+4. rails g migration AddMerchantIdToUser merchant_id GIT - c5b0697
+
+### Payout Process
+1. Cerate helper stripe_express_path
+2. Create payout action in users controller as well route
+3. Create stripe connect callback action in omniauth_callbacks_controller GIT - 
 
 

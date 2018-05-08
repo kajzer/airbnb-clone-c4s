@@ -49,6 +49,7 @@ Rails.application.routes.draw do
   
   get '/host_calendar', to: "calendars#host"
   get '/payment_method', to: "users#payment"
+  get '/payout_method', to: "users#payout"
   post '/add_card', to: "users#add_card"
   
 end
