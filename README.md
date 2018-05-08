@@ -466,6 +466,12 @@
 ### Payout Process
 1. Cerate helper stripe_express_path
 2. Create payout action in users controller as well route
-3. Create stripe connect callback action in omniauth_callbacks_controller GIT - 
+3. Create stripe connect callback action in omniauth_callbacks_controller GIT - 58189a6
+
+### Payout Page
+1. Create view users/payout.html.erb
+2. Test connecting account to stripe
+3. Create link to go to dashboard in stripe for hosts
+4. 
 
 

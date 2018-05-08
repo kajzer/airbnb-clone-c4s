@@ -31,7 +31,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         
         account.save
         
-        logger.debug "#{account}"
+        #logger.debug "#{account}"
       end
       
       sign_in_and_redirect @user, event: :authentication

@@ -43,6 +43,10 @@ class UsersController < ApplicationController
     end
     
     def payout
+      if !current_user.merchant_id.blank?
+        account = Stripe::Account.retrieve(current_user.merchant_id)
+        @login_link = account.login_links.create()
+      end
     end
     
     def add_card
