@@ -521,7 +521,11 @@
 1. rails g model Conversation sender_id:integer recipient_id:integer
 2. rails g model Message context:text user:references conversation:references
 3. Add relations, scopes and validations to converstaion.rb model
-4. Add validation to message.rb model and add convertion of time
-5. 
+4. Add validation to message.rb model and add convertion of time GIT - e178fa2
+
+### Conversations and Messages Controller
+1. Create file conversations_controller.rb
+2. Create messages_controller.rb
+3. Add routes for controllers GIT - 
 
 

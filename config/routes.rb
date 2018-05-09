@@ -49,6 +49,10 @@ Rails.application.routes.draw do
   
   resources :revenues, only: [:index]
   
+  resources :conversations, only: [:index, :create] do 
+    resources :messages, only: [:index, :create]
+  end
+  
   get '/host_calendar', to: "calendars#host"
   get '/payment_method', to: "users#payment"
   get '/payout_method', to: "users#payout"
