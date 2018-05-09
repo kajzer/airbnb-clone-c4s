@@ -526,6 +526,15 @@
 ### Conversations and Messages Controller
 1. Create file conversations_controller.rb
 2. Create messages_controller.rb
-3. Add routes for controllers GIT - 
+3. Add routes for controllers GIT - 3c22a2b
+
+### Conversations and Messages View
+1. Create conversations folder and index.html.erb
+2. Create messages folder and indext.html.erb
+3. Add link to conversations in users/show view
+4. Add message link in shared/navbar
+5. Some fixex of typos content changed to context
+6. Add partial for messages
+7. Change displaying of time to time_ago_in_words GIT - 
 
 

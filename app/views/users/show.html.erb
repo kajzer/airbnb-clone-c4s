@@ -2,6 +2,11 @@
     <div class="col-md-3">
         <div class="center">
             <%= image_tag avatar_url(@user), class: "avatar-full" %>
+            <% if current_user && current_user != @user %>
+                <%= link_to "Send Message", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: :post, class: "btn btn-default" %>
+            <% end %>
+            <br/>
+            <br/>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">Verification</div>

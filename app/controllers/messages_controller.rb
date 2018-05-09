@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
        @messages = @conversation.messages.order("created_at DESC")
        
        if @message.save
-          redirect conversation_messages_path(@conversation) 
+          redirect_to conversation_messages_path(@conversation) 
        end
    end
    
@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
     end
    
    def message_params
-        params.require(:message).permit(:content, :user_id)
+        params.require(:message).permit(:context, :user_id)
    end
    
 end
