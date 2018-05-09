@@ -510,6 +510,11 @@
 ### Settings Controller
 1. Cerate settings_controller.rb
 2. Add routes for settings controller actions
-3. Add logic to reservation_controller to incorporate settings GIT - 
+3. Add logic to reservation_controller to incorporate settings GIT - 92b10df
+
+### Settings View
+1. Create view/settings
+2. Add file edit.html.erb
+3. Add path for settings in views of payout and payment GIT - 
 
 

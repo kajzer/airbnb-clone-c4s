@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-3">
+        <ul class="sidebar-list">
+            <li class="sidebar-item"><%= link_to "Payment Method", payment_method_path, class: "sidebar-link" %></li>
+            <li class="sidebar-item"><%= link_to "Payout Method", payout_method_path, class: "sidebar-link" %></li>
+            <li class="sidebar-item"><%= link_to "Notification Settings", notification_settings_path, class: "sidebar-link active" %></li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-default">
+            <div class="panel-heading">Notification Settings</div>
+            <div class="panel-body">
+                <div class="container">
+                    
+                    <%= form_for :setting do |f| %>
+                    
+                        <div class="row form-group">
+                            <div class="col-md-6 text-center">
+                                <%= f.check_box :enable_email %> Email
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <%= f.check_box :enable_sms %> SMS
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <%= f.submit "Save Settings", class: "btn btn-normal" %>
+                        </div>
+                    
+                    <% end %>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

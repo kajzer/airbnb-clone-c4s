@@ -16,6 +16,6 @@ class SettingsController < ApplicationController
     private
     
         def setting_params
-            parmas.require(:setting).permit(:enable_sms, :enable_email)
+            params.require(:setting).permit(:enable_sms, :enable_email)
         end
 end
