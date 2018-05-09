@@ -489,6 +489,10 @@
 1. Create revenues/index.html.erb view
 2. Add link to shared/navbar for charts
 3. Make nicer chart with all days of the week
-4. Add by myself month revenue chart GIT - 
+4. Add by myself month revenue chart GIT - 7bd65fe
+
+### Sending SMS for Successful Booking
+1. In reservation_controller write private method for sending sms
+2. Add send_sms to charge method GIT - 
 
 
