@@ -499,6 +499,12 @@
 1. Create mailers/reservation_mailer.rb - getemoji.com
 2. Create folder in views/reservation_mailer
 3. Cerate file send_email_to_guest.html.erb
-4. Add line for sending email in reservaions_controller GIT - 
+4. Add line for sending email in reservaions_controller GIT - 7b5ac7b
+
+### Settings Model
+1. rails g model Setting enable_sms:boolean enable_email:boolean user:references
+2. Add default: true to migration
+3. Add loop to migration to add settings to users
+4. Add association to user.rb and add_setting method GIT - 
 
 
