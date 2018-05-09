@@ -505,6 +505,11 @@
 1. rails g model Setting enable_sms:boolean enable_email:boolean user:references
 2. Add default: true to migration
 3. Add loop to migration to add settings to users
-4. Add association to user.rb and add_setting method GIT - 
+4. Add association to user.rb and add_setting method GIT - a7075d4
+
+### Settings Controller
+1. Cerate settings_controller.rb
+2. Add routes for settings controller actions
+3. Add logic to reservation_controller to incorporate settings GIT - 
 
 

@@ -54,4 +54,7 @@ Rails.application.routes.draw do
   get '/payout_method', to: "users#payout"
   post '/add_card', to: "users#add_card"
   
+  get '/notification_settings', to: "settings#edit"
+  post '/notification_settings', to: "settings#update"
+  
 end
