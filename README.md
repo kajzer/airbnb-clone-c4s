@@ -493,6 +493,12 @@
 
 ### Sending SMS for Successful Booking
 1. In reservation_controller write private method for sending sms
-2. Add send_sms to charge method GIT - 
+2. Add send_sms to charge method GIT - cf9791b
+
+### Sending Email for a Successful Booking
+1. Create mailers/reservation_mailer.rb - getemoji.com
+2. Create folder in views/reservation_mailer
+3. Cerate file send_email_to_guest.html.erb
+4. Add line for sending email in reservaions_controller GIT - 
 
 
