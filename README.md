@@ -515,6 +515,13 @@
 ### Settings View
 1. Create view/settings
 2. Add file edit.html.erb
-3. Add path for settings in views of payout and payment GIT - 
+3. Add path for settings in views of payout and payment GIT - aa927ec
+
+### Conversations and Messages Model
+1. rails g model Conversation sender_id:integer recipient_id:integer
+2. rails g model Message context:text user:references conversation:references
+3. Add relations, scopes and validations to converstaion.rb model
+4. Add validation to message.rb model and add convertion of time
+5. 
 
 
