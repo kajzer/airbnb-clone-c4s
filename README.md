@@ -585,7 +585,13 @@
 1. GIT - b47699b
 
 ### Update Room Searching Function
-1. Update pages_controller.rb GIT - 
+1. Update pages_controller.rb GIT - fd81f3f
+
+### Unavailable Dates on Date Pickers
+1. Add logic to get unavailable_dates in rooms_controller
+2. Add javascript to reservations/_form.html.erb
+3. Update is_conflict method in rooms_controller
+4. Clean up code in _form.html.erb GIT - 
 
 
 

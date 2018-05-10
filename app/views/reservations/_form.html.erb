@@ -63,14 +63,51 @@
     $(function() {
         unavailableDate = [];
         
+        
+        function specialCheck() {
+            var start_date = $('#reservation_start_date').datepicker('getDate');
+            var end_date = $('#reservation_end_date').datepicker('getDate');
+            var nights = (end_date - start_date)/1000/60/60/24 + 1;
+            
+            var input = {
+                'start_date': start_date,
+                'end_date': end_date
+            }
+            
+            $.ajax({
+               url: '<%= preview_room_path(@room) %>',
+               data: input,
+               success: function(data) {
+    
+                   if(data.conflict) {
+                       $('#message').text("This date range is not avaliable.");
+                       $('#preview').hide();
+                       $('#btn_book').attr('disabled', true);
+                   } else {
+                       $('#message').text("");
+                       $('#preview').show();
+                       $('#btn_book').attr('disabled', false);
+                       
+                       var total = nights * <%= @room.price %>
+                       $('#reservation_nights').text(nights);
+                       $('#reservation_total').text(total);
+                   }
+               }
+            });   
+        }
+        
         $.ajax({
             url: '<%= preload_room_path(@room) %>',
             dataType: 'json',
             success: function(data) {
-                $.each(data, function(arrID, arrValue) {
+                $.each(data.reservations, function(arrID, arrValue) {
                     for(var d = new Date(arrValue.start_date); d <= new Date(arrValue.end_date); d.setDate(d.getDate() + 1)) {
                         unavailableDate.push($.datepicker.formatDate('d-m-yy', d));
                     }   
+                });
+                
+                $.each(data.unavailable_dates, function(arrID, arrValue) {
+                    unavailableDate.push($.datepicker.formatDate('d-m-yy', new Date(arrValue.day))); 
                 });
                 
                 $('#reservation_start_date').datepicker({
@@ -82,36 +119,8 @@
                         $('#reservation_end_date').datepicker("option", "minDate", selected);
                         $('#reservation_end_date').attr("disabled", false);
                         
-                        
-                        var start_date = $('#reservation_start_date').datepicker('getDate');
-                        var end_date = $('#reservation_end_date').datepicker('getDate');
-                        var nights = (end_date - start_date)/1000/60/60/24 + 1;
-                        
-                        var input = {
-                            'start_date': start_date,
-                            'end_date': end_date
-                        }
-                        
-                        $.ajax({
-                           url: '<%= preview_room_path(@room) %>',
-                           data: input,
-                           success: function(data) {
-
-                               if(data.conflict) {
-                                   $('#message').text("This date range is not avaliable.");
-                                   $('#preview').hide();
-                                   $('#btn_book').attr('disabled', true);
-                               } else {
-                                   $('#message').text("");
-                                   $('#preview').show();
-                                   $('#btn_book').attr('disabled', false);
-                                   
-                                   var total = nights * <%= @room.price %>
-                                   $('#reservation_nights').text(nights);
-                                   $('#reservation_total').text(total);
-                               }
-                           }
-                        });                        
+                        specialCheck();
+                      
                     }
                 });
                 
@@ -123,34 +132,8 @@
                     onSelect: function(selected) {
                         $('#reservation_start_date').datepicker("option", "maxDate", selected);
                         
-                        var start_date = $('#reservation_start_date').datepicker('getDate');
-                        var end_date = $('#reservation_end_date').datepicker('getDate');
-                        var nights = (end_date - start_date)/1000/60/60/24 + 1;
+                        specialCheck();
                         
-                        var input = {
-                            'start_date': start_date,
-                            'end_date': end_date
-                        }
-                        
-                        $.ajax({
-                           url: '<%= preview_room_path(@room) %>',
-                           data: input,
-                           success: function(data) {
-                               if(data.conflict) {
-                                   $('#message').text("This date range is not avaliable.");
-                                   $('#preview').hide();
-                                   $('#btn_book').attr('disabled', true);
-                               } else {
-                                   $('#message').text("");
-                                   $('#preview').show();
-                                   $('#btn_book').attr('disabled', false);
-                                   
-                                   var total = nights * <%= @room.price %>
-                                   $('#reservation_nights').text(nights);
-                                   $('#reservation_total').text(total);
-                               }
-                           }
-                        });
                     }
                 });
             }
