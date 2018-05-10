@@ -549,7 +549,17 @@
 3. Define when should channel braodcast in messages_controller.rb
 4. Modify assets/javascripts/channels/messages.coffee
 5. In messages/index.html.erb add remote: true
-6. Change messages coffe to incorporate $() to load javascript better GIT - 
+6. Change messages coffe to incorporate $() to load javascript better GIT - 66d9f90
+
+### Notification Model
+1. rails g model Notification content user:references
+2. rails g migration AddUnreadToUser unread:integer
+3. Add default: 0 to unread migration
+4. Add relationships to user.rb model
+5. Add after_create_commit to notification.rb model
+6. Add cerate_notification in message.rb model
+7. Add create_notification in reservation.rb model
+8. 
 
 
 
