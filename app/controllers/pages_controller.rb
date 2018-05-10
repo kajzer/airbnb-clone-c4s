@@ -41,7 +41,12 @@ class PagesController < ApplicationController
           1
         ).limit(1)
         
-        if not_available.length > 0 
+        not_available_in_calendar = room.calendars.where(
+          "status = ? AND ? <= day AND day <+ ?",
+          1, start_date, end_date
+          ).limit(1)
+        
+        if not_available.length > 0 || not_available_in_calendar.length > 0
           @arrRooms.delete(room)
         end
       end

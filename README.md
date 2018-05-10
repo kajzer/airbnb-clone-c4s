@@ -582,7 +582,10 @@
 5. Add hidden field with user id to layouts/application.html.erb
 
 ### Ending Improving Notification
-1. GIT - 
+1. GIT - b47699b
+
+### Update Room Searching Function
+1. Update pages_controller.rb GIT - 
 
 
 
