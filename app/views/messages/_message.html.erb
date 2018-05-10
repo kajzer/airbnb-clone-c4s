@@ -2,7 +2,7 @@
     <div class="panel-body">
         <%= image_tag avatar_url(message.user), class: "img-circle avatar-small" %>
         <strong><%= message.user.fullname %></strong>
-        <span class="pull-right">about <%= message.message_time %> ago</span>
+        <span class="pull-right"><%= message.message_time %> ago</span>
         <br/>
         <div class="row-space-2">
             <h4><%= message.context %></h4>

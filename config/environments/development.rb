@@ -53,7 +53,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
   
-  config.action_cable.url = "ws://airbnb-code4startup-kajzer.c9users.io/cable"
+  config.action_cable.url = "wss://airbnb-code4startup-kajzer.c9users.io/cable"
   
   
   config.action_mailer.default_url_options = { host: 'https://airbnb-code4startup-kajzer.c9users.io' }

@@ -541,6 +541,15 @@
 1. In routes.rb mount ActionCable server
 2. Establish socket connection for client side in application.js
 3. Specify socekt uri in config/enviroments/development.rb
-4. Add ActionCable metatag in application.html.erb GIT - 
+4. Add ActionCable metatag in application.html.erb GIT - 73ac43f
+
+### Real time messages
+1. rails g channel messages
+2. add stream_from to channels/messages_channel.rb
+3. Define when should channel braodcast in messages_controller.rb
+4. Modify assets/javascripts/channels/messages.coffee
+5. In messages/index.html.erb add remote: true
+6. Change messages coffe to incorporate $() to load javascript better GIT - 
+
 
 
