@@ -25,7 +25,9 @@
         <div class="panel panel-default">
             <div class="panel-heading">Notifications</div>
             <div class="panel-body">
-                
+                <%= link_to notifications_path do %>
+                    You have <span id="number_of_unread"><%= current_user.unread %></span> notification(s).
+                <% end %>
             </div>
         </div>
         

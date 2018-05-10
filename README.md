@@ -567,7 +567,22 @@
 4. Modify notifications_channel.rb
 5. rails g job notification
 6. Modify jobs/notification_job.rb
-7. Add route for notifications in routes.rb GIT - 
+7. Add route for notifications in routes.rb GIT - a0aef33
+
+### Improving Notification View... Notification View is after this chapter
+1. Add icon to shared/_navbar
+2. Add css for new class in application.scss
+3. Add code to show up number of notifications to notifications.coffee
+
+### Notification View... forgot before last chapter
+1. Add notifications folder
+2. Add index.html.erb for notifications
+3. Create partial for notification
+4. Add Notification count to dashboars/index.html.erb
+5. Add hidden field with user id to layouts/application.html.erb
+
+### Ending Improving Notification
+1. GIT - 
 
 
 
