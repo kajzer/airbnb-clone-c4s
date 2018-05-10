@@ -558,8 +558,16 @@
 4. Add relationships to user.rb model
 5. Add after_create_commit to notification.rb model
 6. Add cerate_notification in message.rb model
-7. Add create_notification in reservation.rb model
-8. 
+7. Add create_notification in reservation.rb model GIT - 5fb5069
+
+### Notification Controller
+1. Add notifications_controller.rb
+2. rails g channel notifications
+3. Add code to notifications.coffee
+4. Modify notifications_channel.rb
+5. rails g job notification
+6. Modify jobs/notification_job.rb
+7. Add route for notifications in routes.rb GIT - 
 
 
 
