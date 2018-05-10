@@ -52,6 +52,10 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
+  
+  config.action_cable.url = "ws://airbnb-code4startup-kajzer.c9users.io/cable"
+  
+  
   config.action_mailer.default_url_options = { host: 'https://airbnb-code4startup-kajzer.c9users.io' }
   
   config.action_mailer.delivery_method = :smtp

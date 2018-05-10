@@ -22,6 +22,7 @@
 //= require turbolinks
 //= require Chart.bundle
 //= require chartkick
+//= require cable
 //= require_tree .
 
 

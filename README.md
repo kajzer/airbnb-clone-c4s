@@ -535,6 +535,12 @@
 4. Add message link in shared/navbar
 5. Some fixex of typos content changed to context
 6. Add partial for messages
-7. Change displaying of time to time_ago_in_words GIT - 
+7. Change displaying of time to time_ago_in_words GIT - 6ef7cac
+
+### Action Cable Configuration
+1. In routes.rb mount ActionCable server
+2. Establish socket connection for client side in application.js
+3. Specify socekt uri in config/enviroments/development.rb
+4. Add ActionCable metatag in application.html.erb GIT - 
 
 
