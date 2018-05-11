@@ -596,7 +596,7 @@
 ### Special Price When Booking
 1. Modify rooms_controller.rb
 2. Modify views/reservations/_form.html.erb
-3. Update reservations_controller.rb to reflect special price GIT - 
+3. Update reservations_controller.rb to reflect special price GIT - 4c4ebb9
 
 
 
