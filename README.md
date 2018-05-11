@@ -591,7 +591,12 @@
 1. Add logic to get unavailable_dates in rooms_controller
 2. Add javascript to reservations/_form.html.erb
 3. Update is_conflict method in rooms_controller
-4. Clean up code in _form.html.erb GIT - 
+4. Clean up code in _form.html.erb GIT - 654cc4a
+
+### Special Price When Booking
+1. Modify rooms_controller.rb
+2. Modify views/reservations/_form.html.erb
+3. Update reservations_controller.rb to reflect special price GIT - 
 
 
 

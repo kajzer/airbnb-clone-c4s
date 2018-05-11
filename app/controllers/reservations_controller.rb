@@ -15,11 +15,21 @@ class ReservationsController < ApplicationController
            end_date = Date.parse(reservation_params[:end_date])
            days = (end_date - start_date).to_i + 1
            
+           special_dates = room.calendars.where(
+            "status = ? AND day BETWEEN ? AND ? AND price <> ?",
+            0, start_date, end_date, room.price
+            )
+           
            @reservation = current_user.reservations.build(reservation_params)
            @reservation.room = room
            @reservation.price = room.price
-           @reservation.total = room.price * days
+           #@reservation.total = room.price * days
            #@reservation.save
+           
+           @reservation.total = room.price * (days - special_dates.count)
+           special_dates.each do |date|
+              @reservation.total += date.price
+           end
            
            if @reservation.Waiting!
               if room.Request?
