@@ -598,5 +598,10 @@
 2. Modify views/reservations/_form.html.erb
 3. Update reservations_controller.rb to reflect special price GIT - 4c4ebb9
 
+# ----------Airgodzilla------------------
 
-
+### Create new API project
+1. Not creating trying to combine both
+2. rails new AirGodzilla --api
+3. Add gems to gemfile: rack-cors, devise, omniauth, paperclip, geocoder, stripe
+4. Create file initializers/cors.rb GIT - 

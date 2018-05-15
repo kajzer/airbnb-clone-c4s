@@ -57,6 +57,10 @@ gem 'omniauth-stripe-connect', '~> 2.10.0'
 
 gem 'chartkick', '~> 2.2.4'
 
+# -----AirGodzilla------
+gem 'rack-cors'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

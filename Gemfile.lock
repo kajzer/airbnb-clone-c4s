@@ -156,6 +156,7 @@ GEM
       activerecord (>= 3.0)
     puma (3.11.3)
     rack (2.0.4)
+    rack-cors (1.0.2)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.7)
@@ -273,6 +274,7 @@ DEPENDENCIES
   omniauth-stripe-connect (~> 2.10.0)
   paperclip (~> 5.1.0)
   puma (~> 3.0)
+  rack-cors
   rails (~> 5.0.3)
   rails-assets-card!
   ransack (~> 1.7)
