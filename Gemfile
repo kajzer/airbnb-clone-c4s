@@ -59,7 +59,8 @@ gem 'chartkick', '~> 2.2.4'
 
 # -----AirGodzilla------
 gem 'rack-cors'
-
+gem 'active_model_serializers', '~> 0.10.0', require: true
+gem 'koala', '~> 3.0.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

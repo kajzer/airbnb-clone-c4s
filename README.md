@@ -604,4 +604,15 @@
 1. Not creating trying to combine both
 2. rails new AirGodzilla --api
 3. Add gems to gemfile: rack-cors, devise, omniauth, paperclip, geocoder, stripe
-4. Create file initializers/cors.rb GIT - 
+4. Create file initializers/cors.rb GIT - 3a9493a
+
+### Adding existing database
+1. Copy all files for models from on to secon project (I had one so no copying)
+2. Copy db folde contents
+3. Copy images from public if not using S3
+4. Comment out in notification.rb line after_create_commit
+
+### Facebook Access Token
+1. rails g migration AddAccessTokenToUsers access_token
+2. Add gem 'active_model_serializers' and gem 'koala'
+3. Create initializers/koala.rb GIT - 
