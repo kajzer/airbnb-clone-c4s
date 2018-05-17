@@ -615,4 +615,9 @@
 ### Facebook Access Token
 1. rails g migration AddAccessTokenToUsers access_token
 2. Add gem 'active_model_serializers' and gem 'koala'
-3. Create initializers/koala.rb GIT - 
+3. Create initializers/koala.rb GIT - b5eeebd
+
+### User Authentication
+1. In course he is creating new application_controller. I created base_controller according to [GITHUB](https://github.com/vasilakisfil/rails5_api_tutorial)
+2. Add to model user.rb
+3. Create controllers/concerns/authenticate.rb GIT - 
