@@ -625,4 +625,8 @@
 
 ### Create User Controller
 1. Create users_controller.rb in api/v1/. Fill with info from [tutorial](https://vasilakisfil.github.io/rails5_api_tutorial/) 
-2. Add routes for new actions in controller
+2. Add routes for new actions in controller GIT - fc06cee
+
+### Testing Facebook Token
+1. With postman and [facebook](https://developers.facebook.com/tools/debug/accesstoken/)
+2. In postman pass raw json object with { "facebook_access_token": "value copied from fb debug" } as post request GIT - 

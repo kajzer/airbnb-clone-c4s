@@ -3,7 +3,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   
   def facebook
     if params[:facebook_access_token]
-      graph = Koala::Facebook:API.new(params[:facebook_access_token])
+      graph = Koala::Facebook::API.new(params[:facebook_access_token])
       user_data = graph.get_object("me?fields=name,email,id,picture")
       user = User.find_by(email: user_data['email'])
       if user
@@ -39,4 +39,5 @@ class Api::V1::UsersController < Api::V1::BaseController
     user.save
     render json: { is_success: true }, status: :ok
   end
+  
 end
