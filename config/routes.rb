@@ -65,4 +65,12 @@ Rails.application.routes.draw do
   
   mount ActionCable.server => '/cable'
   
+  
+  namespace :api, defaults: {format: :json} do
+    namespace :v1 do
+      get '/logout', to: 'users#logout'
+      post '/facebook', to: 'users#facebook'
+    end
+  end
+  
 end

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  before_cerate :generate_authentication_token
+  before_create :generate_authentication_token
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

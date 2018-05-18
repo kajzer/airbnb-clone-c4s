@@ -611,6 +611,7 @@
 2. Copy db folde contents
 3. Copy images from public if not using S3
 4. Comment out in notification.rb line after_create_commit
+5. You can connect to diffrent db according to this [tutorial](https://www.mayankmishra.me/hooking-up-a-rails-app-with-an-existing-mysql-database/)
 
 ### Facebook Access Token
 1. rails g migration AddAccessTokenToUsers access_token
@@ -620,4 +621,8 @@
 ### User Authentication
 1. In course he is creating new application_controller. I created base_controller according to [GITHUB](https://github.com/vasilakisfil/rails5_api_tutorial)
 2. Add to model user.rb
-3. Create controllers/concerns/authenticate.rb GIT - 
+3. Create controllers/concerns/authenticate.rb GIT - 705277f
+
+### Create User Controller
+1. Create users_controller.rb in api/v1/. Fill with info from [tutorial](https://vasilakisfil.github.io/rails5_api_tutorial/) 
+2. Add routes for new actions in controller
