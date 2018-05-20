@@ -629,4 +629,8 @@
 
 ### Testing Facebook Token
 1. With postman and [facebook](https://developers.facebook.com/tools/debug/accesstoken/)
-2. In postman pass raw json object with { "facebook_access_token": "value copied from fb debug" } as post request GIT - 
+2. In postman pass raw json object with { "facebook_access_token": "value copied from fb debug" } as post request GIT - ade8156
+
+### Room List
+1. Create rooms_controller in api/v1
+2. Add route for rooms in routes.rb GIT - 

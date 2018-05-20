@@ -70,6 +70,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/logout', to: 'users#logout'
       post '/facebook', to: 'users#facebook'
+      
+      resources :rooms
     end
   end
   
