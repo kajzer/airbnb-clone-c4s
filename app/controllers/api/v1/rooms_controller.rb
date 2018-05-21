@@ -33,4 +33,37 @@ class Api::V1::RoomsController < Api::V1::BaseController
         }, status: :ok
         
     end
+    
+    def show
+        room = Room.find(params[:id])
+        today = Date.today
+        reservations = Reservation.where(
+            "room_id = ? AND (start_date >= ? AND end_date >= ?) AND status = ?",
+            params[:id], today, today, 1
+        )
+        
+        unavailable_dates = reservations.map { |r| 
+            (r[:start_date].to_datetime...r[:end_date].to_datetime).map { |day| day.strftime("%Y-%m-%d") }
+        }.flatten.to_set
+        
+        calendars = Calendar.where(
+         "room_id = ? AND status = ? AND day >= ?",
+         params[:id], 1, today
+        ).pluck(:day).map(&:to_datetime).map { |day| day.strftime("%Y-%m-%d") }.flatten.to_set
+        
+        unavailable_dates.merge calendars
+        
+        if !room.nil?
+            room_serializer = RoomSerializer.new(
+                room,
+                image: room.cover_photo('medium'),
+                #avatar_url: room.user.image,
+                unavailable_dates: unavailable_dates
+            )
+            render json: {room: room_serializer, is_success: true }, status: :ok
+        else
+            render json: { error: "Invalid ID", is_success: false }, status: 422
+        end
+        
+    end
 end

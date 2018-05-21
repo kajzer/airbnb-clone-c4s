@@ -624,7 +624,7 @@
 3. Create controllers/concerns/authenticate.rb GIT - 705277f
 
 ### Create User Controller
-1. Create users_controller.rb in api/v1/. Fill with info from [tutorial](https://vasilakisfil.github.io/rails5_api_tutorial/) 
+1. Create users controller.rb in api/v1/. Fill with info from [tutorial](https://vasilakisfil.github.io/rails5_api_tutorial/) 
 2. Add routes for new actions in controller GIT - fc06cee
 
 ### Testing Facebook Token
@@ -633,4 +633,10 @@
 
 ### Room List
 1. Create rooms_controller in api/v1
-2. Add route for rooms in routes.rb GIT - 
+2. Add route for rooms in routes.rb GIT - c8ca885
+
+### Room Details
+1. Create serializers folder
+2. Create room_serializer.rb
+3. Add sohw action in rooms_controller in api namespace
+4. Check with postman GIT - 
