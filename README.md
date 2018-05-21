@@ -639,4 +639,12 @@
 1. Create serializers folder
 2. Create room_serializer.rb
 3. Add sohw action in rooms_controller in api namespace
-4. Check with postman GIT - 
+4. Check with postman GIT - cc576ef
+
+### Payment Controller
+1. Copy initializers/stripe.rb (allready have it)
+2. Add add_card action in api/v1/users_controller.rb
+3. Add payments route GIT - 
+
+### Booking Room Controller
+1. 
