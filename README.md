@@ -644,7 +644,7 @@
 ### Payment Controller
 1. Copy initializers/stripe.rb (allready have it)
 2. Add add_card action in api/v1/users_controller.rb
-3. Add payments route GIT - 
+3. Add payments route GIT - 7625f4f
 
 ### Booking Room Controller
-1. 
+1. Add reservations_controller.rb GIT - 
