@@ -1,4 +1,4 @@
-class Api::V1::RoomsController < Api::V1::BaseController
+class Api::V1::ReservationsController < Api::V1::BaseController
     before_action :authenticate_with_token!
     
     def create
@@ -10,8 +10,8 @@ class Api::V1::RoomsController < Api::V1::BaseController
             render json: { error: "you can't book your own property", is_success: false }, status: 404
         else
             # Calculate the total amount of that reservation
-            start_date = DateTime.parse(reservation_params(:start_date))
-            end_date = DateTime.parse(reservation_params(:end_date))
+            start_date = DateTime.parse(reservation_params[:start_date])
+            end_date = DateTime.parse(reservation_params[:end_date])
             
             days = (end_date - start_date).to_i + 1
             special_days = Calendar.where(
@@ -39,7 +39,32 @@ class Api::V1::RoomsController < Api::V1::BaseController
     end
     
     private
-     def reservation_params
-        params.require(:reservation).permit(:start_date, end_date)
-     end
+        def reservation_params
+            params.require(:reservation).permit(:start_date, :end_date)
+        end
+        
+        def charge(room, reservation)
+            if reservation.user.stripe_id.blank? && room.user.merchant_id.blank?
+                customer = Stripe::Customer.retrieve(reservation.user.stripe_id)
+                charge = Stripe::Charge.create(
+                    :customer => customer.id,
+                    :amount => reservation.total * 100,
+                    :description => room.listing_name,
+                    :currency => 'usd',
+                    :destination => {
+                        :amount => reservation.total * 80,
+                        :account => room.user.merchant_id
+                    }
+                )
+                
+                if charge
+                    reservation.Approved!
+                else
+                    reservation.Declined!
+                end
+            end
+        rescue Stripe::CardError => e
+            reservation.declined!
+            render json: {error: e.message, is_success: false}, status: 404
+        end
 end

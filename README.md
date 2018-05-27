@@ -647,4 +647,12 @@
 3. Add payments route GIT - 7625f4f
 
 ### Booking Room Controller
-1. Add reservations_controller.rb GIT - 
+1. Add reservations_controller.rb GIT - a7b3864
+
+### Charging Function
+1. Create new function charge in reservations_controller.rb
+2. Add route for reservations
+3. Test with postman GIT - 
+
+### Updating Reservations Controller
+1. 
