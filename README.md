@@ -652,7 +652,11 @@
 ### Charging Function
 1. Create new function charge in reservations_controller.rb
 2. Add route for reservations
-3. Test with postman GIT - 
+3. Test with postman. The access_token was taken from db directly GIT - 
 
 ### Updating Reservations Controller
-1. 
+1. Create new action your_listings in rooms controller
+2. Create new action reservations_by_room n reservations_controller
+3. Cerate new serializer for Reservations
+4. Add routes
+5. Test with postman GIT - 

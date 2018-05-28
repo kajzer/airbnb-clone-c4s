@@ -38,6 +38,13 @@ class Api::V1::ReservationsController < Api::V1::BaseController
         end
     end
     
+    def reservations_by_room
+        reservations = Reservation.where(room_id: params[:id])
+        reservations = reservations.map { |r| ReservationSerializer.new(r, avatar_url: r.user.image) }
+        render json: {reservations: reservations, is_success: true}, status: :ok
+    end
+    
+    
     private
         def reservation_params
             params.require(:reservation).permit(:start_date, :end_date)

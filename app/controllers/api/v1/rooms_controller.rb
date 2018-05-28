@@ -66,4 +66,13 @@ class Api::V1::RoomsController < Api::V1::BaseController
         end
         
     end
+    
+    def your_listings
+        rooms = current_user.rooms
+        render json: {
+            rooms: rooms.map { |r| r.attributes.merge(image: r.cover_photo('medium'), instant: r.instant != "Request" ) },
+            is_success: true
+        }, status: :ok
+    end
+    
 end
