@@ -659,4 +659,13 @@
 2. Create new action reservations_by_room n reservations_controller
 3. Cerate new serializer for Reservations
 4. Add routes
-5. Test with postman GIT - 
+5. Test with postman GIT - 71880ed
+
+### Approve/Decline Reservation
+1. Add code to reservations_controller
+2. Add routes for new actions
+3. Test in postman GIT - 
+
+# ------------ REACT NATIVE -----------------------
+
+### 

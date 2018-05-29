@@ -78,7 +78,12 @@ Rails.application.routes.draw do
           get '/reservations', to: 'reservations#reservations_by_room'
         end
       end
-      resources :reservations
+      resources :reservations do
+        member do
+          post '/approve', to: 'reservations#approve'
+          post '/decline', to: 'reservations#decline'
+        end
+      end
     end
   end
   

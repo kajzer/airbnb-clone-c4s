@@ -1,5 +1,6 @@
 class Api::V1::ReservationsController < Api::V1::BaseController
     before_action :authenticate_with_token!
+    before_action :set_reservation, only: [:approve, :decline]
     
     def create
         room = Room.find(params[:room_id])
@@ -44,8 +45,33 @@ class Api::V1::ReservationsController < Api::V1::BaseController
         render json: {reservations: reservations, is_success: true}, status: :ok
     end
     
+    def approve
+        if @reservation.room.user_id == current_user.id #if current user is host of this room
+            charge(@reservation.room, @reservation)
+            render json: {is_success: true}, status: :ok
+        else
+            render json: {error: "No Permission", is_success: false}, status: 404
+        end
+        
+    end
+    
+    def decline
+        if @reservation.room.user_id == current_user.id #if current user is host of this room
+            @reservation.Declined!
+            render json: {is_success: true}, status: :ok
+        else
+            render json: {error: "No Permission", is_success: false}, status: 404
+        end
+    end
+    
+    
     
     private
+    
+        def set_reservation
+            @reservation = Reservation.find(params[:id])
+        end
+        
         def reservation_params
             params.require(:reservation).permit(:start_date, :end_date)
         end
