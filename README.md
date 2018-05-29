@@ -664,7 +664,7 @@
 ### Approve/Decline Reservation
 1. Add code to reservations_controller
 2. Add routes for new actions
-3. Test in postman GIT - 
+3. Test in postman GIT - 006a8eb
 
 # ------------ REACT NATIVE -----------------------
 
