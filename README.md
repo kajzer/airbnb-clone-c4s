@@ -668,4 +668,14 @@
 
 # ------------ REACT NATIVE -----------------------
 
-### 
+### Initialize React Native Project
+1. Get code from [here](https://github.com/leotrieu/Code4StartupReactNativeBoilerplate)
+2. Unzip and npm install
+
+### Setting Android Emulator
+1. According to react native documentation
+2. launching AVD manager and virtual device
+3. In downloaded project folder type: react-native run-android
+
+### Running Android Emulator from Terminal
+1. 
