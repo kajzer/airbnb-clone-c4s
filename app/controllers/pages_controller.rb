@@ -13,7 +13,7 @@ class PagesController < ApplicationController
     if session[:loc_search] && session[:loc_search] != ""
       @rooms_address = Room.where(active: true).near(session[:loc_search], 5, order: 'distance')
     else
-      @rooms_adress = Room.where(active: true).all
+      @rooms_address = Room.where(active: true).all
     end
     
     # Use ransack to apply all the filters that user selected to rooms found
